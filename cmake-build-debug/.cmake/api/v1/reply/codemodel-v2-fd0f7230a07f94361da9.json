@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "algorithms",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "algorithms_geometry::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-algorithms_geometry-Debug-93d59b025a1a56d104d5.json",
+					"name" : "algorithms_geometry",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "algorithms_graphs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-algorithms_graphs-Debug-63e2ec604903db4a03a7.json",
+					"name" : "algorithms_graphs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "algorithms_numbers::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-algorithms_numbers-Debug-1341d89e725a70d66f89.json",
+					"name" : "algorithms_numbers",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "algorithms_sorting::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-algorithms_sorting-Debug-171957ba63bea1cb4e36.json",
+					"name" : "algorithms_sorting",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "double_list::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-double_list-Debug-5d4f1994f15ab5bfa0aa.json",
+					"name" : "double_list",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug",
+		"source" : "C:/Users/User/Desktop/Algorithms/algorithms"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
