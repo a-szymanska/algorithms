@@ -1,7 +1,3 @@
-//
-// Created by User on 22.05.2024.
-//
-
 #include "double_linked_list.h"
 #include <iostream>
 #include <string>

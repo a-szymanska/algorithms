@@ -1,8 +1,13 @@
-
+/**
+ * Implementation of interval tree template for custom Value and Modifier
+ * classes with any associative operation + for combining Values
+ * and * for combining Modifiers and defined () operator for applying
+ * the effect of Modifier on Value.
+ * Created by Anna Szymańska on 10.01.2023
+ */
 
 #ifndef ALGORITHMS_INTERVAL_TREE_H
 #define ALGORITHMS_INTERVAL_TREE_H
-
 
 #include <vector>
 
@@ -54,6 +59,11 @@ class IntervalTree {
     }
 
 public:
+    /**
+     * Construct the tree initializing all values to value
+     * @param n         number of leaves, i.e. size of expected data
+     * @param value     the initial value for nodes
+     */
     IntervalTree(std::size_t n, Value value = {}) : N(1 << (std::__lg(n) + 1)), T(2*N) {
         Node node = {value, {}};
         std::fill(T.begin() + N, T.end(), node);
@@ -62,6 +72,10 @@ public:
         }
     }
 
+    /**
+     * Construct the tree initializing the nodes according to values
+     * @param values     the initial values for nodes
+     */
     IntervalTree(const std::vector<Value>& values) : N(1 << (std::__lg(values.size()) + 1)), T(2*N) {
         for (int i = 0; i < values.size(); i++) {
             T[N+i].val = values[i];

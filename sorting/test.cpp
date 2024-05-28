@@ -64,8 +64,8 @@ void test_five_sort() {
 
 void test_find_kth() {
     std::vector<int> data = {0, 1, 2, 3, 1, 1, 0, 4, 0};
-    int n = data.size(), k = 7;
-    int k_element = get_median(data, 0, n-1, --k);
+    int n = static_cast<int>(data.size()), k = 7;
+    int k_element = get_kth(data, k);
     assert(k_element == 2);
 }
 

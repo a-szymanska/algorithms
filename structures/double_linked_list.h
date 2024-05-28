@@ -1,18 +1,21 @@
+/**
+ * Implementation of double linked list template with reverse
+ * and merge operations. All operations (except clear) are performed
+ * in constant time.
+ * Created by Anna Szymańska on 10.01.2023
+ */
+
 #ifndef ALGORITHMS_DOUBLE_LINKED_LIST_H
 #define ALGORITHMS_DOUBLE_LINKED_LIST_H
 
 #include <iostream>
 
-/**
- *
- * @tparam T
- */
 template <class T>
 class Node {
 public:
     T name;
     Node* next[2];
-    Node ( ) { }
+    Node( ) = default;
     Node(const T & _name) { name = _name; }
 
     friend std::ostream &operator<<(std::ostream &os, const Node & node) {
@@ -45,16 +48,16 @@ public:
     }
 
     /**
-     *
+     * Add node initialized with name to the beginning of the list
      * @param name
      */
     void push_front(const T & name) {
-        Node<T> * node = new Node<T>(name);
+        auto * node = new Node<T>(name);
         push_front(node);
-    } // Dodaje nowy element zawierający name na początek listy.
+    }
 
     /**
-     *
+     * Add the node to the beginning of the list
      * @param n
      */
     void push_front(Node<T>* node) {
@@ -64,19 +67,19 @@ public:
         node->next[dir_head]->next[dir_sec] = node;
         node->next[1-dir_head] = head;
         head->next[dir_head] = node;
-    } // Dodaje element n na początek listy.
+    }
 
     /**
-     *
+     * Add node initialized with name to the end of the list
      * @param name
      */
     void push_back(const T & name) {
-        Node<T>* node = new Node<T>(name);
+        auto * node = new Node<T>(name);
         push_back(node);
-    } // Dodaje nowy element zawierający name na koniec listy.
+    }
 
     /**
-     *
+     * Add node to the end of the list
      * @param node
      */
     void push_back(Node<T>* node) {
@@ -86,13 +89,14 @@ public:
         node->next[dir_tail]->next[dir_last] = node;
         node->next[1-dir_tail] = tail;
         tail->next[dir_tail] = node;
-    } // Dodaje element n na koniec listy.
+    }
 
     /**
-     *
-     * @return
+     * Remove the first element from the list.
+     * If list is empty, return nullptr;
+     * @return      pointer to the removed node
      */
-    Node<T>* pop_front() {
+    Node<T> * pop_front() {
         if (empty()) return nullptr;
         bool dir_head = (head->next[0] == tail);
         bool dir_n = (head->next[dir_head]->next[0] == head);
@@ -103,13 +107,14 @@ public:
         node->next[0] = nullptr;
         node->next[1] = nullptr;
         return node;
-    } // Odpina i zwraca pierwszy element listy. Jeśli lista jest pusta zwraca nullptr.
+    }
 
     /**
-     *
-     * @return
+     * Remove the last element from the list.
+     * If list is empty, return nullptr;
+     * @return      pointer to the removed node
      */
-    Node<T>* pop_back() {
+    Node<T> * pop_back() {
         if (empty()) return nullptr;
         bool dir_tail = (tail->next[0] == head);
         bool dir_n = (tail->next[dir_tail]->next[0] == tail);
@@ -120,10 +125,10 @@ public:
         node->next[0] = nullptr;
         node->next[1] = nullptr;
         return node;
-    } // Odpina i zwraca ostatni element listy. Jeśli lista jest pusta zwraca nullptr.
+    }
 
     /**
-     *
+     *  Reverse the order of elements in the list
      */
     void reverse() {
         if (empty()) return;
@@ -137,10 +142,11 @@ public:
         tail->next[dir_tail] = head;
         tail->next[1-dir_tail]->next[dir_sec] = tail;
         head->next[1-dir_head]->next[dir_last] = head;
-    } // Odwraca aktualną listę.
+    }
 
     /**
-     *
+     * Add all elements of list L to the end of this list
+     * After the operation, L becomes empty
      * @param L
      */
     void merge(DoubleList<T>& L) {
@@ -161,10 +167,10 @@ public:
         L.tail->next[1] = L.head;
         L.head->next[0] = L.tail;
         L.head->next[1] = L.tail;
-    } // Na koniec aktualnej listy dołącza elementy listy L. Po wykonaniu operacji lista L jest pusta.
+    }
 
     /**
-     *
+     * Remove elements from the list
      */
     void clear() {
         if (empty()) return;
@@ -183,11 +189,8 @@ public:
         head->next[1] = tail;
         tail->next[0] = head;
         tail->next[1] = head;
-    } // Usuwa wszystkie elementy listy
+    }
 
-    /**
-     *
-     */
     class Iterator {
     public:
         Node<T> *current = nullptr;
