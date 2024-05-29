@@ -1,15 +1,17 @@
 /**
- *
- * Created by Anna Szymańska on 24.11.2022
+ * Implementation of modular exponentiation by squaring
+ * Time complexity: O(k)
+ * Space complexity: O(1)
+ * Created by Anna Szymańska on 24.04.2024
  */
 
 #include <iostream>
 
 /**
- *
- * @param a
- * @param k
- * @param p
+ * Calculate a^k mod p
+ * @param a     base
+ * @param k     exponent
+ * @param p     modular base
  * @return
  */
 

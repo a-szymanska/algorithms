@@ -1,9 +1,16 @@
+/**
+ * Implementation of the Graham's scan algorithm
+ * and a function to calculate the area of a convex polygon.
+ * Time complexity: O(n*lg(n))
+ * Space complexity: O(n)
+ * Created by Anna Szymańska on 08.05.2024
+ */
+
 #include <vector>
-using namespace std;
+#include <stack>
 
 struct Point {
-    long long x, y;
-
+    int x, y;
     bool operator==(Point const & p) const {
         return x == p.x && y == p.y;
     }
@@ -13,15 +20,14 @@ struct Point {
 };
 
 int ccw(const Point &, const Point &, const Point &);
-long long dist(Point, Point);
-
+int dist(Point, Point);
 
 /**
- *
- * @param P
- * @param H
+ * From those given, choose the points that form a convex hull
+ * @param P     array of Points
+ * @param H     array to store the hull
  */
-void get_convex_hull(vector<Point> & P, vector<Point> & H) {
+void get_convex_hull(std::vector<Point> & P, std::vector<Point> & H) {
     int n = static_cast<int>(P.size());
     Point p_min = P[0];
     int idx_min = 0;
@@ -40,7 +46,7 @@ void get_convex_hull(vector<Point> & P, vector<Point> & H) {
     };
     sort(P.begin()+1, P.end(), compare);
 
-    vector<Point> P_ncl({p_min});
+    std::vector<Point> P_ncl({p_min});
     for (int i = 1; i < n; i++) {
         for (; i < n-1; i++) {
             if (ccw(p_min, P[i], P[i+1]) != 0) {
@@ -53,34 +59,31 @@ void get_convex_hull(vector<Point> & P, vector<Point> & H) {
     if (n_ncl < 3) {
         return;
     }
-
-    vector<Point> S(n_ncl);
+    std::vector<Point> S(n_ncl);
     int n_stack = 3;
     S[0] = P_ncl[0];
     S[1] = P_ncl[1];
     S[2] = P_ncl[2];
-
     for (int i = 3; i < n_ncl; i++) {
         while (n_stack > 1 && ccw(S[n_stack-2], S[n_stack-1], P_ncl[i]) != 1) {
             n_stack--;
         }
         S[n_stack++] = P_ncl[i];
     }
-
     for (int i = n_stack-1; i >= 0; i--) {
         H.push_back(S[i]);
     }
 }
 
 /**
- *
- * @param p
- * @param q
- * @param r
+ * Determine the counter-clockwise direction of r respective to p-q vector
+ * @param p     first point
+ * @param q     second point
+ * @param r     third point
  * @return
  */
 int ccw(const Point & p, const Point & q, const Point & r) {
-    long long res = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
+    int res = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
     if (res < 0) {
         return 1;
     } else if (res > 0) {
@@ -90,13 +93,27 @@ int ccw(const Point & p, const Point & q, const Point & r) {
 }
 
 /**
- *
- * @param p
- * @param q
+ * Calculate euclidean distance between points p and q
+ * @param p     first point
+ * @param q     second point
  * @return
  */
-long long dist(Point p, Point q) {
-    long long delta_x = (p.x - q.x);
-    long long delta_y = (p.y - q.y);
+int dist(Point p, Point q) {
+    int delta_x = (p.x - q.x);
+    int delta_y = (p.y - q.y);
     return delta_x * delta_x + delta_y * delta_y;
+}
+
+/**
+ * Calculate the area of a convex polygon
+ * @param P     array of polygon vertices sorted by ccw
+ * @return
+ */
+int get_area(std::vector<Point> & P) {
+    int n = static_cast<int>(P.size());
+    int area = 0;
+    for (int i = 0, j = n-1; i < n; j=i, i++) {
+        area += (P[j].x + P[i].x) * (P[j].y - P[i].y);
+    }
+    return area >> 1;
 }

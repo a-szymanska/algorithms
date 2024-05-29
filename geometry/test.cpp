@@ -1,22 +1,27 @@
 #include "max_plus.cpp"
 #include "convex_hull.cpp"
-#include "convex_polygon_area.cpp"
 
 #include <iostream>
 #include <vector>
 #include <cassert>
 
-//void test_max_plus() {
-//    int n_vertical = , n_horizontal = ;
-//    std::vector<Point> P;
-//    int i = 0;
-//    P.push_back({i++, x, y, l, V});
-//    P.push_back({i+n_vertical, x, y, l, L});
-//    P.push_back({i+n_vertical, x+l, y, l, R});
-//    int res = max_plus(P);
-//    assert(max_plus == )
-//    std::cout << "Max plus test: OK" << std::endl;
-//}
+void test_max_plus() {
+    // Vertical segments: ((4,0), (4,9)), ((6,1), (6,3))
+    // Horizontal segments: ((0,3), (2,3)), ((1,2), (8,2)), ((1,1), (9,1))
+    int i = 0;
+    std::vector<EndPoint> P = { // { id, x, y, l, type }
+            {i++, 4, 0, 8, V},  // ((4,0), (4,9))
+            {i++, 6, 1, 2, V},  // ((6,1), (6,3))
+            {i, 0, 3, 2, L},  // ((0,3), (2,3))
+            {i++, 2, 3, 2, R},
+            {i, 1, 2, 7, L},  // ((1,2), (8,2))
+            {i++, 8, 2, 7, R},
+            {i, 1, 1, 8, L},  // ((1,1), (9,1))
+            {i++, 9, 1, 8, R}
+    };
+    assert(max_plus(P) == 2);
+    std::cout << "Max plus test: OK" << std::endl;
+}
 
 void test_convex_hull() {
     std::vector<Point> points = {
@@ -58,6 +63,7 @@ void test_convex_hull_area() {
 }
 
 int main() {
+    test_max_plus();
     test_convex_hull();
     test_convex_hull_area();
     return 0;

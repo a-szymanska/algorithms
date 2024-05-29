@@ -2,6 +2,7 @@
 #include "gcd.cpp"
 #include "power.cpp"
 #include "equation_solver.cpp"
+#include "reverse_polish_notation.cpp"
 
 #include <iostream>
 #include <cassert>
@@ -39,16 +40,43 @@ void test_gcd_stein() {
 }
 
 void test_power() {
+    assert(power(4, 24, 1000000) == 710656);
+    assert(power(47, 2, 65) == 64);
     std::cout << "Power test: OK" << std::endl;
 }
 
 void test_equation_solver() {
+    assert(solve(2, 4, 7) == 2);
+    assert(solve(2, 1, 7) == 0);
+    assert(solve(5, 7, 13) == -1);
+    assert(solve(1, 1, 2) == 0);
     std::cout << "Equation solver test: OK" << std::endl;
+}
+
+void test_reverse_polish_notation() {
+    std::string formula0 = "a/(b-c)", rpn_formula0 = "abc-/";
+    std::vector<int> values0 = {5, 2, 3};
+    assert(rpn_formula0 == convert(formula0));
+    assert(calculate(rpn_formula0, values0) == -5);
+
+    std::string formula1 = "(a+b)*c+(d-a)*(e-b)", rpn_formula1 = "ab+c*da-eb-*+";
+    std::vector<int> values1 = {1, 2, 3, 4, 5};
+    assert(rpn_formula1 == convert(formula1));
+    assert(calculate(rpn_formula1, values1) == 18);
+
+    std::string formula2 = "a+((c-b)/(a+b)*d-b)^b-e", rpn_formula2 = "acb-ab+/d*b-b^+e-";
+    std::vector<int> values2 = {1, 2, 12, 4, 4};
+    assert(rpn_formula2 == convert(formula2));
+    assert(calculate(rpn_formula2, values2) == 97);
+    std::cout << "Reverse Polish Notation test: OK" << std::endl;
 }
 
 int main() {
     test_miller_rabin();
     test_gcd();
     test_gcd_stein();
+    test_power();
+    test_equation_solver();
+    test_reverse_polish_notation();
     return 0;
 }

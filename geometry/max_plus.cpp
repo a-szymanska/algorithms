@@ -1,7 +1,18 @@
+/**
+ * Algorithm to find the greatest "plus" given vertical
+ * and horizontal segments. The size of the plus is minimum
+ * length from the center (intersection) to any end of intersecting
+ * segments. The solution is found using binary search and sweeping methods.
+ * Time complexity: O(n*lg^2(n))
+ * Space complexity: O(n)
+ * Created by Anna Szymańska on 15.05.2024
+ */
+
 #include <vector>
 #include <algorithm>
 #include <set>
 #include <climits>
+#include <iostream>
 
 #define L (-1)
 #define R  1
@@ -18,19 +29,16 @@ struct EndPoint {
 };
 bool find_plus(int, std::vector<EndPoint> &);
 
-
 /**
- *
- * @param P
+ * Binsearch the solution
+ * @param P     array of ends of segments
  * @return
  */
-
 int max_plus(std::vector<EndPoint> & P) {
-    int max_len = INT_MIN;
+    int max_len = INT_MIN;  // max_element
     for (auto p : P) {
         max_len = std::max(max_len, p.l);
     }
-
     int l = 0, r = max_len;
     while (l < r) {
         int mid = (l + r + 1) / 2;
@@ -43,6 +51,12 @@ int max_plus(std::vector<EndPoint> & P) {
     return l;
 }
 
+/**
+ * Find a plus with given size
+ * @param r     size of a plus
+ * @param P     array of ends of segments
+ * @return
+ */
 bool find_plus(int r, std::vector<EndPoint> &P) {
     std::vector<EndPoint> Q;
     int max_id = INT_MIN;
