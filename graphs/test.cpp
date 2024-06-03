@@ -2,6 +2,8 @@
 #include "edmonds_karp.cpp"
 #include "floyd_warshall.cpp"
 #include "bipartite.cpp"
+#include "turbo_matching.cpp"
+#include "bellman_ford.cpp"
 
 #include <iostream>
 #include <vector>
@@ -83,10 +85,49 @@ void test_bipartite() {
     std::cout << "Bipartite test: OK" << std::endl;
 }
 
+void test_turbo_matching() {
+    std::vector<std::vector<int>> adj = {
+            {4},
+            {6},
+            {5, 6},
+            {5, 6},
+            {0},
+            {2, 3},
+            {1, 2, 3}
+    };
+    assert(find_match(adj) == 3);
+    std::cout << "Turbo matching test: OK" << std::endl;
+}
+
+void test_bellman_ford() {
+    std::vector<std::vector<std::pair<int, int>>> adj0 = {
+            {{1,-1}, {2,4}},
+            {{2,3}, {3,2}, {4,2}},
+            {},
+            {{2,5}, {1,1}},
+            {{3,-3}}
+    };
+    std::vector<int> dist0 = {0, -1, 2, -2, 1};
+    assert(dist0 == bellman_ford(adj0, 0));
+
+    // Negative weight cycle
+    std::vector<std::vector<std::pair<int, int>>> adj1 = {
+            {{1,-1}, {2,4}},
+            {{3,1}},
+            {},
+            {{0,-2}}
+    };
+    assert(bellman_ford(adj1, 0).empty());
+
+    std::cout << "Bellman-Ford test: OK" << std::endl;
+}
+
 int main() {
     test_dwyer();
     test_edmonds_karp();
     test_floyd_warshall();
     test_bipartite();
+    test_turbo_matching();
+    test_bellman_ford();
     return 0;
 }

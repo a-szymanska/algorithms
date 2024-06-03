@@ -2,7 +2,7 @@
  * Implementation of Dwyer's algorithm for triple order traverse
  * in a binary tree. Each non-leaf node is visited three times.
  * The algorithm modifies the tree but finally restores the original.
- * Time complexity: O(n)
+ * Time complexity: O(|V|)
  * Space complexity: O(1)
  * Created by Anna Szymańska on 23.03.2023
  */

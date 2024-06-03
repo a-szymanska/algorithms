@@ -173,6 +173,72 @@ build algorithms_geometry.exe: CXX_EXECUTABLE_LINKER__algorithms_geometry_Debug 
   TARGET_PDB = algorithms_geometry.exe.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target algorithms_dynamic
+
+
+#############################################
+# Order-only phony target for algorithms_dynamic
+
+build cmake_object_order_depends_target_algorithms_dynamic: phony || CMakeFiles/algorithms_dynamic.dir
+
+build CMakeFiles/algorithms_dynamic.dir/dynamic/test.cpp.obj: CXX_COMPILER__algorithms_dynamic_Debug C$:/Users/User/Desktop/Algorithms/algorithms/dynamic/test.cpp || cmake_object_order_depends_target_algorithms_dynamic
+  DEP_FILE = CMakeFiles\algorithms_dynamic.dir\dynamic\test.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\algorithms_dynamic.dir
+  OBJECT_FILE_DIR = CMakeFiles\algorithms_dynamic.dir\dynamic
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target algorithms_dynamic
+
+
+#############################################
+# Link the executable algorithms_dynamic.exe
+
+build algorithms_dynamic.exe: CXX_EXECUTABLE_LINKER__algorithms_dynamic_Debug CMakeFiles/algorithms_dynamic.dir/dynamic/test.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\algorithms_dynamic.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = algorithms_dynamic.exe
+  TARGET_IMPLIB = libalgorithms_dynamic.dll.a
+  TARGET_PDB = algorithms_dynamic.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target algorithms_text
+
+
+#############################################
+# Order-only phony target for algorithms_text
+
+build cmake_object_order_depends_target_algorithms_text: phony || CMakeFiles/algorithms_text.dir
+
+build CMakeFiles/algorithms_text.dir/texts/test.cpp.obj: CXX_COMPILER__algorithms_text_Debug C$:/Users/User/Desktop/Algorithms/algorithms/texts/test.cpp || cmake_object_order_depends_target_algorithms_text
+  DEP_FILE = CMakeFiles\algorithms_text.dir\texts\test.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\algorithms_text.dir
+  OBJECT_FILE_DIR = CMakeFiles\algorithms_text.dir\texts
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target algorithms_text
+
+
+#############################################
+# Link the executable algorithms_text.exe
+
+build algorithms_text.exe: CXX_EXECUTABLE_LINKER__algorithms_text_Debug CMakeFiles/algorithms_text.dir/texts/test.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\algorithms_text.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = algorithms_text.exe
+  TARGET_IMPLIB = libalgorithms_text.dll.a
+  TARGET_PDB = algorithms_text.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target double_list
 
 
@@ -205,6 +271,105 @@ build double_list.exe: CXX_EXECUTABLE_LINKER__double_list_Debug CMakeFiles/doubl
   TARGET_IMPLIB = libdouble_list.dll.a
   TARGET_PDB = double_list.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target interval_tree
+
+
+#############################################
+# Order-only phony target for interval_tree
+
+build cmake_object_order_depends_target_interval_tree: phony || CMakeFiles/interval_tree.dir
+
+build CMakeFiles/interval_tree.dir/structures/interval_tree.cpp.obj: CXX_COMPILER__interval_tree_Debug C$:/Users/User/Desktop/Algorithms/algorithms/structures/interval_tree.cpp || cmake_object_order_depends_target_interval_tree
+  DEP_FILE = CMakeFiles\interval_tree.dir\structures\interval_tree.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\interval_tree.dir
+  OBJECT_FILE_DIR = CMakeFiles\interval_tree.dir\structures
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target interval_tree
+
+
+#############################################
+# Link the executable interval_tree.exe
+
+build interval_tree.exe: CXX_EXECUTABLE_LINKER__interval_tree_Debug CMakeFiles/interval_tree.dir/structures/interval_tree.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\interval_tree.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = interval_tree.exe
+  TARGET_IMPLIB = libinterval_tree.dll.a
+  TARGET_PDB = interval_tree.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target heap
+
+
+#############################################
+# Order-only phony target for heap
+
+build cmake_object_order_depends_target_heap: phony || CMakeFiles/heap.dir
+
+build CMakeFiles/heap.dir/structures/heap.cpp.obj: CXX_COMPILER__heap_Debug C$:/Users/User/Desktop/Algorithms/algorithms/structures/heap.cpp || cmake_object_order_depends_target_heap
+  DEP_FILE = CMakeFiles\heap.dir\structures\heap.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\heap.dir
+  OBJECT_FILE_DIR = CMakeFiles\heap.dir\structures
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target heap
+
+
+#############################################
+# Link the executable heap.exe
+
+build heap.exe: CXX_EXECUTABLE_LINKER__heap_Debug CMakeFiles/heap.dir/structures/heap.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\heap.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = heap.exe
+  TARGET_IMPLIB = libheap.dll.a
+  TARGET_PDB = heap.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target simplex
+
+
+#############################################
+# Order-only phony target for simplex
+
+build cmake_object_order_depends_target_simplex: phony || CMakeFiles/simplex.dir
+
+build CMakeFiles/simplex.dir/numbers/simplex.cpp.obj: CXX_COMPILER__simplex_Debug C$:/Users/User/Desktop/Algorithms/algorithms/numbers/simplex.cpp || cmake_object_order_depends_target_simplex
+  DEP_FILE = CMakeFiles\simplex.dir\numbers\simplex.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  OBJECT_DIR = CMakeFiles\simplex.dir
+  OBJECT_FILE_DIR = CMakeFiles\simplex.dir\numbers
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target simplex
+
+
+#############################################
+# Link the executable simplex.exe
+
+build simplex.exe: CXX_EXECUTABLE_LINKER__simplex_Debug CMakeFiles/simplex.dir/numbers/simplex.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\simplex.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = simplex.exe
+  TARGET_IMPLIB = libsimplex.dll.a
+  TARGET_PDB = simplex.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -231,6 +396,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build algorithms_dynamic: phony algorithms_dynamic.exe
+
 build algorithms_geometry: phony algorithms_geometry.exe
 
 build algorithms_graphs: phony algorithms_graphs.exe
@@ -239,7 +406,15 @@ build algorithms_numbers: phony algorithms_numbers.exe
 
 build algorithms_sorting: phony algorithms_sorting.exe
 
+build algorithms_text: phony algorithms_text.exe
+
 build double_list: phony double_list.exe
+
+build heap: phony heap.exe
+
+build interval_tree: phony interval_tree.exe
+
+build simplex: phony simplex.exe
 
 # =============================================================================
 # Folder targets.
@@ -249,7 +424,7 @@ build double_list: phony double_list.exe
 #############################################
 # Folder: C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug
 
-build all: phony algorithms_sorting.exe algorithms_numbers.exe algorithms_graphs.exe algorithms_geometry.exe double_list.exe
+build all: phony algorithms_sorting.exe algorithms_numbers.exe algorithms_graphs.exe algorithms_geometry.exe algorithms_dynamic.exe algorithms_text.exe double_list.exe interval_tree.exe heap.exe simplex.exe
 
 # =============================================================================
 # Built-in targets

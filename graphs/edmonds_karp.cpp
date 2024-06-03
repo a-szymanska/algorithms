@@ -15,7 +15,7 @@ struct Edge {
     int v, c, f, rev_idx;
 };
 struct PathEdge {
-    int u = -1, v, min_f = INT_MAX, idx, rev_idx;
+    int u = -1, v{}, min_f = INT_MAX, idx{}, rev_idx{};
 };
 
 /**

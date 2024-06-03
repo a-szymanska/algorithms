@@ -3,6 +3,7 @@
 #include "power.cpp"
 #include "equation_solver.cpp"
 #include "reverse_polish_notation.cpp"
+#include "ternary_search.cpp"
 
 #include <iostream>
 #include <cassert>
@@ -71,6 +72,38 @@ void test_reverse_polish_notation() {
     std::cout << "Reverse Polish Notation test: OK" << std::endl;
 }
 
+void test_ternary_search() {
+    // Basic quadratic function
+    assert(std::abs(ternary_search(-10, 10, 1e-9,
+                                   [](double x) { return -(x-2)*(x-2) + 4; }) - 4) < 1e-6);
+
+    // Linear function
+    assert(std::abs(ternary_search(0, 10, 1e-9,
+                                   [](double x) { return 2*x + 3; }) - 23) < 1e-6);
+
+    // Constant function
+    assert(std::abs(ternary_search(0, 10, 1e-9,
+                                   [](double x) { return 5; }) - 5) < 1e-6);
+
+    // Custom quadratic function
+    assert(std::abs(ternary_search(0, 6, 1e-9,
+                                   [](double x) { return -x*x + 6*x - 5; }) - 4) < 1e-6);
+
+    // Narrow interval
+    assert(std::abs(ternary_search(1.4, 1.6, 1e-9,
+                                   [](double x) { return -(x-1.5)*(x-1.5); }) - 0) < 1e-6);
+
+    // Large interval
+    assert(std::abs(ternary_search(-1000, 1000, 1e-9,
+                                   [](double x) { return -x*x; }) - 0) < 1e-6);
+
+    // Edge case with eps
+    assert(std::abs(ternary_search(-10, 10, 1e-6,
+                                   [](double x) { return -x*x; }) - 0) < 1e-3);
+
+    std::cout << "Ternary search test: OK" << std::endl;
+}
+
 int main() {
     test_miller_rabin();
     test_gcd();
@@ -78,5 +111,6 @@ int main() {
     test_power();
     test_equation_solver();
     test_reverse_polish_notation();
+    test_ternary_search();
     return 0;
 }

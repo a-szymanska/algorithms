@@ -11,6 +11,11 @@
 #include <vector>
 #include <queue>
 
+/**
+ * Check if a graph is bipartite
+ * @param adj       adjacency list
+ * @return          true if the graph is bipartite else false
+ */
 bool is_bipartite(std::vector<std::vector<int>> & adj) {
     int n = static_cast<int>(adj.size());
     std::vector<int> colour(n, false);

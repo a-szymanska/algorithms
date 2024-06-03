@@ -8,6 +8,10 @@
 
 #include <vector>
 
+/**
+ * Find the shortest pairwise distances
+ * @param dist      2D array with lengths of edges
+ */
 void floyd_warshall(std::vector<std::vector<int>> & dist) {
     int n = static_cast<int>(dist.size());
     for (int u = 0; u < n; u++) {

@@ -2,6 +2,11 @@ C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/algorit
 C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/algorithms_numbers.dir
 C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/algorithms_graphs.dir
 C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/algorithms_geometry.dir
+C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/algorithms_dynamic.dir
+C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/algorithms_text.dir
 C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/double_list.dir
+C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/interval_tree.dir
+C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/heap.dir
+C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/simplex.dir
 C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/User/Desktop/Algorithms/algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir

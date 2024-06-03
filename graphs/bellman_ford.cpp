@@ -13,16 +13,16 @@
 
 
 /**
- * Compute the shortest distances from source to other vertices
- * @param adj           adjacency list
- * @param source        source vertex
- * @return              array of distances
- *                      If a negative weight cycle is detected, an empty vector is returned.
+ * Compute the shortest distances from src to other vertices
+ * @param adj       adjacency list
+ * @param src       source vertex
+ * @return          array of distances
+ *                  If a negative weight cycle is detected, an empty vector is returned.
  */
-std::vector<int> bellman_ford(const std::vector<std::vector<std::pair<int, int>>> &adj, int source) {
+std::vector<int> bellman_ford(const std::vector<std::vector<std::pair<int, int>>> &adj, int src) {
     int n = static_cast<int>(adj.size());
     std::vector<int> dist(n, INT_MAX);
-    dist[source] = 0;
+    dist[src] = 0;
 
     for (int i = 0; i < n - 1; i++) {
         for (int u = 0; u < n; u++) {

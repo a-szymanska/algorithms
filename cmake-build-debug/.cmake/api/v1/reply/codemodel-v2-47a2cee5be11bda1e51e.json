@@ -19,7 +19,12 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
 					]
 				}
 			],
@@ -38,12 +43,24 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "algorithms_dynamic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-algorithms_dynamic-Debug-8978994b6b53d2fa10cc.json",
+					"name" : "algorithms_dynamic",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "algorithms_geometry::@6890427a1f51a3e7e1df",
@@ -74,9 +91,37 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "algorithms_text::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-algorithms_text-Debug-b3a6fab429f9fe41c852.json",
+					"name" : "algorithms_text",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "double_list::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-double_list-Debug-5d4f1994f15ab5bfa0aa.json",
+					"jsonFile" : "target-double_list-Debug-3df94c82ffb99b9ae7a6.json",
 					"name" : "double_list",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "heap::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-heap-Debug-74caa51ca7b435a06a08.json",
+					"name" : "heap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "interval_tree::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-interval_tree-Debug-3841fe722b788ff3e371.json",
+					"name" : "interval_tree",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "simplex::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-simplex-Debug-5cff32c809644e3a82de.json",
+					"name" : "simplex",
 					"projectIndex" : 0
 				}
 			]

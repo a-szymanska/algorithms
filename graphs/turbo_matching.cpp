@@ -17,11 +17,10 @@
  */
 int find_match(std::vector<std::vector<int>>& adj) {
     int n = static_cast<int>(adj.size());
-    std::vector<int> M(2 * n + 1, -1);
+    std::vector<int> M(n, -1);
     bool found;
     do {
         std::vector<bool> vis(2 * n + 1, false);
-        found = false;
         std::function<bool(int)> dfs = [&](int u) -> bool {
             if (vis[u]) return false;
             vis[u] = true;
@@ -34,16 +33,16 @@ int find_match(std::vector<std::vector<int>>& adj) {
             }
             return false;
         };
-
-        for (int u = 1; u <= n; u++) {
+        found = false;
+        for (int u = 0; u < n; u++) {
             if (M[u] == -1) {
-                found = std::max(found, dfs(u));
+                found |= dfs(u);
             }
         }
     } while (found);
 
     int n_matched = 0;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 0; i < n; i++) {
         if (M[i] != -1) n_matched++;
     }
     return n_matched / 2;

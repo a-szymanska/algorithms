@@ -1,9 +1,19 @@
-#include <iostream>
+/**
+ * Algorithm to convert a mathematical formula to Reverse Polish Notation
+ * and evaluate it given values for the variables.
+ * Created by Anna Szymańska on 06.01.2022
+ */
+
 #include <stack>
 #include <cmath>
 #include <functional>
 #include <array>
 
+/**
+ * Return the priority of the operator.
+ * @param op    operator as a char
+ * @return
+ */
 int priority(char op) {
     switch (op) {
         case '(': return 0;
@@ -17,6 +27,11 @@ int priority(char op) {
     }
 }
 
+/**
+ * Convert the formula to RPN, don't modify the input string
+ * @param formula       formula to convert
+ * @return              formula after conversion
+ */
 std::string convert(const std::string & formula) {
     std::stack<char> S;
     std::string rpn_formula;
@@ -34,7 +49,7 @@ std::string convert(const std::string & formula) {
             if (!S.empty()) S.pop();
             continue;
         }
-        if(!S.empty() &&priority(ch) <= priority(S.top()) && priority(ch) != 0) {
+        if(!S.empty() && priority(ch) <= priority(S.top()) && priority(ch) != 0) {
             while(!S.empty() && priority(ch) <= priority(S.top())) {
                 rpn_formula += S.top();
                 S.pop();
@@ -56,6 +71,13 @@ std::string convert(const std::string & formula) {
     return rpn_formula;
 }
 
+/**
+ * Given formula in RPN and values of variables evaluate the formula
+ * The variables should be small letters
+ * @param rpn_formula
+ * @param values
+ * @return
+ */
 int calculate(const std::string & rpn_formula, const std::vector<int> & values) {
     std::array<std::function<int(int, int)>, 60> operations{};
     operations['+' - '*'] = [](int a, int b) { return a + b; };
