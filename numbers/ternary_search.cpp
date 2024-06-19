@@ -2,7 +2,7 @@
  * An implementation of the ternary search algorithm.
  * Time complexity: O(log(n))
  * Space complexity: O(1)
- * Created by Anna Szymańska on 24.11.2022
+ * Created on 24.11.2022
  */
 
 #include <functional>

@@ -4,6 +4,7 @@
 #include "bipartite.cpp"
 #include "turbo_matching.cpp"
 #include "bellman_ford.cpp"
+#include "dijkstra.cpp"
 
 #include <iostream>
 #include <vector>
@@ -122,6 +123,38 @@ void test_bellman_ford() {
     std::cout << "Bellman-Ford test: OK" << std::endl;
 }
 
+void test_dijkstra() {
+        // Test Case 1: Simple graph
+        std::vector<std::vector<std::pair<int, int>>> adj0 = {
+                {{1,1}, {2,10}},
+                {{2,2}, {0,4}},
+                {{3,3}},
+                {}
+        };
+        std::vector<std::vector<int>> pairwise_dist0 = {
+                {0, 1, 3, 6},
+                {4, 0, 2, 5},
+                {INT_MAX, INT_MAX, 0, 3},
+                {INT_MAX, INT_MAX, INT_MAX, 0}
+        };
+        assert(pairwise_dist0 == dijkstra(adj0));
+
+        // Test Case 2: Graph with negative weights
+        std::vector<std::vector<std::pair<int, int>>> adj1 = {
+                {{1,1}},
+                {{2,-1}, {0,4}},
+                {{0,-1}}
+        };
+        std::vector<std::vector<int>> pairwise_dist1 = {
+                {0, 1, 0},
+                {-2, 0, -1},
+                {-1, 0, 0}
+        };
+        assert(pairwise_dist1 == dijkstra(adj1));
+
+    std::cout << "Dijkstra test: OK" << std::endl;
+}
+
 int main() {
     test_dwyer();
     test_edmonds_karp();
@@ -129,5 +162,6 @@ int main() {
     test_bipartite();
     test_turbo_matching();
     test_bellman_ford();
+    test_dijkstra();
     return 0;
 }

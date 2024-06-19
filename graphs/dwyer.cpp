@@ -4,7 +4,7 @@
  * The algorithm modifies the tree but finally restores the original.
  * Time complexity: O(|V|)
  * Space complexity: O(1)
- * Created by Anna Szymańska on 23.03.2023
+ * Created on 23.03.2023
  */
 
 #include <vector>

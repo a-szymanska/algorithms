@@ -4,7 +4,7 @@
  * but chooses the shortest augmenting paths thanks to BFS.
  * Time complexity: O(|V|*|E|^2)
  * Space complexity: O(|V|+|E|)
- * Created by Anna Szymańska on 01.03.2024
+ * Created on 01.03.2024
  */
 
 #include <vector>

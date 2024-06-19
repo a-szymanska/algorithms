@@ -5,7 +5,7 @@
  * negative weight cycles.
  * Time complexity: O(V*E)
  * Space complexity: O(V)
- * Created by Anna Szymańska on 11.10.2023
+ * Created on 11.10.2023
  */
 
 #include <vector>

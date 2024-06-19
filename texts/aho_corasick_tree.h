@@ -4,7 +4,7 @@
  * Time complexity of construction: O(n)
  * Space complexity: O(n)
  * for n being the sum of lengths of all patterns
- * Created by Anna Szymańska on 17.04.2024
+ * Created on 17.04.2024
  */
 
 #ifndef ALGORInodesHMS_AHO_CORASICK_nodesREE_H

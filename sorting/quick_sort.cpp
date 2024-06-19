@@ -2,7 +2,7 @@
  * An implementation of the quick sort algorithm in C++.
  * The algorithm uses randomization of pivot choice
  * and Lomuto's three-way partition.
- * Created by Anna Szymańska on 27.05.2023
+ * Created on 27.05.2023
  */
 
 #include <vector>

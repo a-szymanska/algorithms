@@ -3,7 +3,7 @@
  * It is achieved by performing exactly seven comparisons
  * and that it cannot be done better.
  * (https://en.wikipedia.org/wiki/Comparison_sort)
- * Created by Anna Szymańska on 30.05.2023
+ * Created on 30.05.2023
  */
 
 #include <vector>

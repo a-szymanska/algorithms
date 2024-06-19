@@ -3,7 +3,7 @@
  * the shortest paths between all pairs of vertices in a weighted graph.
  * Time complexity: O(|V|^3)
  * Space complexity: O(|V|^2)
- * Created by Anna Szymańska on 21.11.2023
+ * Created on 21.11.2023
  */
 
 #include <vector>

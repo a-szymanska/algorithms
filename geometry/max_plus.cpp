@@ -5,7 +5,7 @@
  * segments. The solution is found using binary search and sweeping methods.
  * Time complexity: O(n*lg^2(n))
  * Space complexity: O(n)
- * Created by Anna Szymańska on 15.05.2024
+ * Created on 15.05.2024
  */
 
 #include <vector>

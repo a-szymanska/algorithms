@@ -13,3 +13,4 @@ add_executable(double_list structures/double_linked_list.cpp structures/double_l
 add_executable(interval_tree structures/interval_tree.cpp structures/interval_tree.h)
 add_executable(heap structures/heap.cpp structures/heap.h)
 add_executable(simplex numbers/simplex.cpp numbers/simplex.h)
+add_executable(unordered_map structures/unordered_map.cpp structures/unordered_map.h)

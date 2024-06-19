@@ -1,7 +1,7 @@
 /**
  * Algorithm to convert a mathematical formula to Reverse Polish Notation
  * and evaluate it given values for the variables.
- * Created by Anna Szymańska on 06.01.2022
+ * Created on 06.01.2022
  */
 
 #include <stack>

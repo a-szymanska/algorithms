@@ -5,7 +5,7 @@
  * Time complexity: O(|V|+|E|)
  * Space complexity: O(|V|)
  *
- * Created by Anna Szymańska on 12.02.2023
+ * Created on 12.02.2023
  */
 
 #include <vector>

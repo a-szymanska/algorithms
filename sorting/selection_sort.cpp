@@ -1,6 +1,6 @@
 /**
  * A simple implementation of the selection sort algorithm in C++.
- * Created by Anna Szymańska on 4.11.2022
+ * Created on 4.11.2022
  */
 
 #include <vector>

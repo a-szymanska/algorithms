@@ -4,7 +4,7 @@
  * the standard one (euclidean) and the one based on Stein's algorithm
  * that is without division or modulo operations which are typically significantly
  * slower than the logic operations.
- * Created by Anna Szymańska on 24.11.2022
+ * Created on 24.11.2022
  */
 
 

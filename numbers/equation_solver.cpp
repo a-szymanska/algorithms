@@ -3,7 +3,7 @@
  * a^x = b mod p.
  * Time complexity: O(sqrt(p)*lg(p))
  * Space complexity: O(sqrt(p))
- * Created by Anna Szymańska on 24.04.2024
+ * Created on 24.04.2024
  */
 
 #include <iostream>

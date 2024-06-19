@@ -2,7 +2,7 @@
  * An implementation of the Miller-Rabin primality test in C++.
  * This algorithm tests the primality of natural numbers up to 10^18.
  * It uses randomization for the choice of bases and fast modular exponentiation.
- * Created by Anna Szymańska on 15.05.2024
+ * Created on 15.05.2024
  */
 
 #include <vector>
