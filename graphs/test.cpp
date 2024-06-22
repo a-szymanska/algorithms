@@ -6,6 +6,7 @@
 #include "bellman_ford.cpp"
 #include "dijkstra.cpp"
 #include "tree_hashing.cpp"
+#include "connected_components.cpp"
 
 #include <iostream>
 #include <vector>
@@ -167,6 +168,29 @@ void test_tree_hashing() {
     std::cout << "Tree hashing test: OK" << std::endl;
 }
 
+void test_scc() {
+    std::vector<std::vector<int>> adj0 = {
+            {1},
+            {2, 4},
+            {0, 3},
+            {},
+            {3}
+    };
+    std::vector<int> components0 = {0, 0, 0, 2, 1};
+    assert(components0 == get_scc(5, adj0));
+
+    std::vector<std::vector<int>> adj1 = {
+            {1},
+            {2},
+            {0, 3},
+            {1}
+    };
+    std::vector<int> components1 = {0, 0, 0, 0};
+    assert(components1 == get_scc(4, adj1));
+
+    std::cout << "Strongly connected components test: OK" << std::endl;
+}
+
 int main() {
     test_dwyer();
     test_edmonds_karp();
@@ -176,5 +200,6 @@ int main() {
     test_bellman_ford();
 //    test_dijkstra();
     test_tree_hashing();
+    test_scc();
     return 0;
 }
