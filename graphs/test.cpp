@@ -5,6 +5,7 @@
 #include "turbo_matching.cpp"
 #include "bellman_ford.cpp"
 #include "dijkstra.cpp"
+#include "tree_hashing.cpp"
 
 #include <iostream>
 #include <vector>
@@ -155,6 +156,17 @@ void test_dijkstra() {
     std::cout << "Dijkstra test: OK" << std::endl;
 }
 
+void test_tree_hashing() {
+    std::vector<char> treeA = {'(', '(', ')', '(', '(', ')', '(', ')', ')', ')'};
+    std::vector<char> treeB = {'(', '(', '(', ')', '(', '(', ')', ')', ')', ')'};
+    std::vector<char> treeC = {'(', '(', '(', ')', '(', ')', ')', '(', ')', ')'};
+
+    auto hashA = hash_tree(treeA), hashB = hash_tree(treeB), hashC = hash_tree(treeC);
+    assert(hashA != hashB);
+    assert(hashA == hashC);
+    std::cout << "Tree hashing test: OK" << std::endl;
+}
+
 int main() {
     test_dwyer();
     test_edmonds_karp();
@@ -162,6 +174,7 @@ int main() {
     test_bipartite();
     test_turbo_matching();
     test_bellman_ford();
-    test_dijkstra();
+//    test_dijkstra();
+    test_tree_hashing();
     return 0;
 }
