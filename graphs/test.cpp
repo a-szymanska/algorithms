@@ -6,7 +6,7 @@
 #include "bellman_ford.cpp"
 #include "dijkstra.cpp"
 #include "tree_hashing.cpp"
-#include "connected_components.cpp"
+#include "connected_components.cpp"\
 
 #include <iostream>
 #include <vector>
