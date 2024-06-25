@@ -6,7 +6,8 @@
 #include "bellman_ford.cpp"
 #include "dijkstra.cpp"
 #include "tree_hashing.cpp"
-#include "connected_components.cpp"\
+#include "connected_components.cpp"
+#include "topological_sort.cpp"
 
 #include <iostream>
 #include <vector>
@@ -191,6 +192,34 @@ void test_scc() {
     std::cout << "Strongly connected components test: OK" << std::endl;
 }
 
+void test_topological_sort() {
+     vector<vector<int>> adj0 = {
+         {2, 4, 5},
+         {4, 5},
+         {3, 4},
+         {},
+         {5},
+         {}
+     };
+    vector<vector<int>> sorted0;
+    vector<vector<int>> sorted_correct0 = {
+            {0, 1},
+            {2},
+            {3, 4},
+            {5}
+    };
+    assert(toposort(sorted0, adj0) == true);
+    assert(sorted_correct0 == sorted0);
+    vector<vector<int>> adj1 = {
+            {1},
+            {2},
+            {0}
+    };
+    vector<vector<int>> sorted1;
+    assert(toposort(sorted1, adj1) == false);
+    std::cout << "Topological sort test: OK" << std::endl;
+}
+
 int main() {
     test_dwyer();
     test_edmonds_karp();
@@ -201,5 +230,6 @@ int main() {
 //    test_dijkstra();
     test_tree_hashing();
     test_scc();
+    test_topological_sort();
     return 0;
 }
