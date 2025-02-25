@@ -1,10 +1,10 @@
-#include "miller_rabin.cpp"
-#include "gcd.cpp"
-#include "power.cpp"
-#include "equation_solver.cpp"
-#include "reverse_polish_notation.cpp"
-#include "ternary_search.cpp"
-#include "sat.cpp"
+#include "miller_rabin.hpp"
+#include "gcd.hpp"
+#include "power.hpp"
+#include "equation_solver.hpp"
+#include "reverse_polish_notation.hpp"
+#include "ternary_search.hpp"
+#include "sat.hpp"
 
 #include <iostream>
 #include <cassert>
@@ -114,7 +114,6 @@ void test_sat() {
     assert(sat_values == values);
     std::cout << "2-SAT test: OK" << std::endl;
 }
-
 
 int main() {
     test_miller_rabin();

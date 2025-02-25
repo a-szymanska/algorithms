@@ -5,11 +5,13 @@
 
 #include <vector>
 
+#ifndef ALGORITHMS_BUBBLE_SORT_H
+#define ALGORITHMS_BUBBLE_SORT_H
+
 /**
  * Perform the bubble sort algorithm
  * @param data      array of integers to be sorted
  */
-
 void bubble_sort(std::vector<int> & data) {
     int x = 0, n = static_cast<int>(data.size());
     bool swap_flag = false;
@@ -26,3 +28,5 @@ void bubble_sort(std::vector<int> & data) {
         }
     }
 }
+
+#endif //ALGORITHMS_BUBBLE_SORT_H

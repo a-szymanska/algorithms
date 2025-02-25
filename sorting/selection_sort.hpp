@@ -5,11 +5,13 @@
 
 #include <vector>
 
+#ifndef ALGORITHMS_SELECTION_SORT_H
+#define ALGORITHMS_SELECTION_SORT_H
+
 /**
  * Perform the selection sort algorithm
  * @param data      array of integers to be sorted
  */
-
 void selection_sort(std::vector<int> & data) {
     int n = static_cast<int>(data.size());
     for(int i = 0; i < n; i++) {
@@ -23,3 +25,5 @@ void selection_sort(std::vector<int> & data) {
         data[min_idx] = data[i], data[i] = min_x;
     }
 }
+
+#endif //ALGORITHMSSELECTION_SORTT_H

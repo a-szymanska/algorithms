@@ -5,11 +5,13 @@
 
 #include <vector>
 
+#ifndef ALGORITHMS_INSERTION_SORT_H
+#define ALGORITHMS_INSERTION_SORT_H
+
 /**
  * Perform the insertion sort algorithm
  * @param data      array of integers to be sorted
  */
-
 void insertion_sort(std::vector<int> & data, int l = 0, int r = -1) {
     int n = static_cast<int>(data.size());
     if (r != -1) {
@@ -27,3 +29,5 @@ void insertion_sort(std::vector<int> & data, int l = 0, int r = -1) {
         }
     }
 }
+
+#endif //ALGORITHMS_INSERTION_SORT_H

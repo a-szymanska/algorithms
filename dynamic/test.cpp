@@ -1,4 +1,4 @@
-#include "backpack_problem.cpp"
+#include "backpack_problem.hpp"
 
 #include <iostream>
 #include <vector>

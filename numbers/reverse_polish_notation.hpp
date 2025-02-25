@@ -9,6 +9,9 @@
 #include <functional>
 #include <array>
 
+#ifndef ALGORITHMS_RPN_H
+#define ALGORITHMS_RPN_H
+
 /**
  * Return the priority of the operator.
  * @param op    operator as a char
@@ -100,3 +103,5 @@ int calculate(const std::string & rpn_formula, const std::vector<int> & values) 
     S.pop();
     return res;
 }
+
+#endif //ALGORITHMS_RPN_H

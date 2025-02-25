@@ -8,8 +8,10 @@
 #include <vector>
 #define u128 __uint128_t
 
-u128 power(u128, u128, u128);
+#ifndef ALGORITHMS_MILLER_RABIN_H
+#define ALGORITHMS_MILLER_RABIN_H
 
+u128 power(u128, u128, u128);
 
 /**
  * Perform Miller-Rabin primality test
@@ -63,3 +65,5 @@ u128 power(u128 a, u128 d, u128 n) {
     }
     return res;
 }
+
+#endif //ALGORITHMS_MILLER_RABIN_H

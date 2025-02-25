@@ -10,10 +10,12 @@
 #include <stack>
 #include <functional>
 
+#ifndef ALGORITHMS_SAT_H
+#define ALGORITHMS_SAT_H
+
 #define WHITE 0
 #define GRAY 1
 #define BLACK 2
-
 
 /**
  * Find the satisfying assignment for the given boolean formula or decide
@@ -78,3 +80,6 @@ bool sat(int n, std::vector<int> & values, const std::vector<std::pair<int, int>
     }
     return true;
 }
+
+
+#endif //ALGORITHMS_SAT_H

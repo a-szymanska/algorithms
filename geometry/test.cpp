@@ -1,5 +1,5 @@
-#include "max_plus.cpp"
-#include "convex_hull.cpp"
+#include "max_plus.hpp"
+#include "convex_hull.hpp"
 
 #include <iostream>
 #include <vector>

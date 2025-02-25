@@ -10,6 +10,9 @@
 #include <vector>
 #include <unordered_map>
 
+#ifndef ALGORITHMS_EQUATION_SOLVER_H
+#define ALGORITHMS_EQUATION_SOLVER_H
+
 /**
  * Solve the equation
  * @param a     first constant
@@ -43,3 +46,5 @@ int64_t solve(int64_t a, int64_t b, int64_t p) {
     }
     return -1;
 }
+
+#endif //ALGORITHMS_EQUATION_SOLVER_H

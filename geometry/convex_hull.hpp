@@ -9,6 +9,9 @@
 #include <vector>
 #include <stack>
 
+#ifndef ALGORITHMS_CONVEX_HULL_H
+#define ALGORITHMS_CONVEX_HULL_H
+
 struct Point {
     int x, y;
     bool operator==(Point const & p) const {
@@ -117,3 +120,5 @@ int get_area(std::vector<Point> & P) {
     }
     return area >> 1;
 }
+
+#endif //ALGORITHMS_CONVEX_HULL_H

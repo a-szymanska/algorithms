@@ -7,6 +7,9 @@
 
 #include <iostream>
 
+#ifndef ALGORITHMS_POWER_H
+#define ALGORITHMS_POWER_H
+
 /**
  * Calculate a^k mod p
  * @param a     base
@@ -26,3 +29,5 @@ int64_t power(int64_t a, int k, int64_t p) {
     }
     return res;
 }
+
+#endif //ALGORITHMS_POWER_H

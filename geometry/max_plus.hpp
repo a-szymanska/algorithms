@@ -12,7 +12,9 @@
 #include <algorithm>
 #include <set>
 #include <climits>
-#include <iostream>
+
+#ifndef ALGORITHMS_MAX_PLUS_H
+#define ALGORITHMS_MAX_PLUS_H
 
 #define L (-1)
 #define R  1
@@ -98,3 +100,4 @@ bool find_plus(int r, std::vector<EndPoint> &P) {
     return false;
 }
 
+#endif //ALGORITHMS_MAX_PLUS_H

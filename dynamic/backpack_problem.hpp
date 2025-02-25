@@ -9,6 +9,10 @@
 
 #include <vector>
 
+
+#ifndef ALGORITHMS_BACKPACK_H
+#define ALGORITHMS_BACKPACK_H
+
 std::vector<int> chosen_objects;
 
 /**
@@ -76,3 +80,5 @@ std::vector<int> & hirschberg(int l, int r, int max_w, std::vector<int> & weight
     }
     return chosen_objects;
 }
+
+#endif //ALGORITHMS_BACKPACK_H

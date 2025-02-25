@@ -6,6 +6,9 @@
 
 #include <vector>
 
+#ifndef ALGORITHMS_MEDIAN_H
+#define ALGORITHMS_MEDIAN_H
+
 /**
  * Given and array recursively find the kth element
  * @param data       array of integers
@@ -14,7 +17,6 @@
  * @param k          number of element to find
  * @return           kth element from data array in non-decreasing order
  */
-
 int get_median(std::vector<int> & data, int left, int right, int k) {
     if (right - left <= 10) {
         insertion_sort(data, left, right);
@@ -57,3 +59,5 @@ int get_kth(std::vector<int> & data, int k) {
     }
     return get_median(data, 0, n-1, --k);
 }
+
+#endif //ALGORITHMS_MEDIAN_H

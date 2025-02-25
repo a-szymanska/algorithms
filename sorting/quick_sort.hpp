@@ -7,8 +7,10 @@
 
 #include <vector>
 
-void doPartition(std::vector<int> &, int, int, int &, int &);
+#ifndef ALGORITHMS_QUICK_SORT_H
+#define ALGORITHMS_QUICK_SORT_H
 
+void doPartition(std::vector<int> &, int, int, int &, int &);
 
 /**
  * Perform the quicksort algorithm.
@@ -16,7 +18,6 @@ void doPartition(std::vector<int> &, int, int, int &, int &);
  * @param l         left index of subarray
  * @param r         right index of subarray
  */
-
 void quick_sort(std::vector<int> & data, int lower = -1, int upper = -1) {
     if (lower == -1) {
         lower = 0;
@@ -46,3 +47,5 @@ void doPartition(std::vector<int> & data, int lower, int upper, int& l, int& r) 
         else if (data[i] > pivot) std::swap(data[i--], data[r--]);
     }
 }
+
+#endif //ALGORITHMS_QUICK_SORT_H

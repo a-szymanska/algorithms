@@ -8,6 +8,9 @@
 
 #include <vector>
 
+#ifndef ALGORITHMS_PREF_SUF_H
+#define ALGORITHMS_PREF_SUF_H
+
 /**
  * Get the longest prefix-suffix array
  * @param txt       text as array
@@ -58,3 +61,4 @@ std::vector<int> kmp(const std::vector<char> & pat, const std::vector<char> & tx
     return matches;
 }
 
+#endif //ALGORITHMS_PREF_SUF_H

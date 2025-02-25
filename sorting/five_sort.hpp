@@ -8,12 +8,14 @@
 
 #include <vector>
 
+#ifndef ALGORITHMS_FIVE_SORT_H
+#define ALGORITHMS_FIVE_SORT_H
+
 /**
  * Swap two integers passed by reference.
  * @param x      first operand
  * @param y      second operand
  */
-
 void swap(int & x, int & y) {
     x = x ^ y;
     y = x ^ y;
@@ -25,7 +27,6 @@ void swap(int & x, int & y) {
  * @param data      array of integers that is to be sorted
  * @param l         start index of the five element subarray in the array
  */
-
 void five_sort(std::vector<int> & data, int l = 0) {
     int l0 = l, l1 = l0 + 1, l2 = l1 + 1, l3 = l2 + 1, l4 = l3 + 1;
     if(data[l1] < data[l0]) {
@@ -75,3 +76,5 @@ void five_sort(std::vector<int> & data, int l = 0) {
         }
     }
 }
+
+#endif //ALGORITHMS_FIVE_SORT_H

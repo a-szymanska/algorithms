@@ -1,4 +1,4 @@
-#include "pref_suf.cpp"
+#include "pref_suf.hpp"
 #include <iostream>
 #include <cassert>
 

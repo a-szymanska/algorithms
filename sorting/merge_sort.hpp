@@ -7,8 +7,10 @@
 
 #include <vector>
 
-int merge(std::vector<int> &, int, int);
+#ifndef ALGORITHMS_MERGE_SORT_H
+#define ALGORITHMS_MERGE_SORT_H
 
+int merge(std::vector<int> &, int, int);
 
 /**
  * Perform the merge sort algorithm recursively
@@ -17,7 +19,6 @@ int merge(std::vector<int> &, int, int);
  * @param r         right index of subarray
  * @return          number of inversions
  */
-
 int merge_sort(std::vector<int> & data, int l = -1, int r = -1) {
     if (l == -1) {
         l = 0; r = static_cast<int>(data.size()) - 1;
@@ -40,7 +41,6 @@ int merge_sort(std::vector<int> & data, int l = -1, int r = -1) {
  * @param r         right index of subarray
  * @return          number of inversions
  */
-
 int merge(std::vector<int> & data, int l, int r) {
     int m = (r-l) / 2;
     std::vector<int> tmp(r-l+1);
@@ -65,3 +65,5 @@ int merge(std::vector<int> & data, int l, int r) {
     }
     return inv_cnt;
 }
+
+#endif //ALGORITHMS_MERGE_SORT_H

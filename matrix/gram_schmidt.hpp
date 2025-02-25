@@ -11,6 +11,9 @@
 #include <cmath>
 #include <vector>
 
+#ifndef ALGORITHMS_GRAM_SCHMIDT_H
+#define ALGORITHMS_GRAM_SCHMIDT_H
+
 /**
  * Perform modified Gram-Schmidt orthogonalization
  * @param A     input matrix of N vectors from R^D
@@ -36,3 +39,5 @@ void gram_schmidt(const std::vector<std::vector<double>> & A, std::vector<std::v
         }
     }
 }
+
+#endif //ALGORITHMS_GRAM_SCHMIDT_H

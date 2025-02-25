@@ -7,6 +7,9 @@
 
 #include <functional>
 
+#ifndef ALGORITHMS_TERNARY_SEARCH_H
+#define ALGORITHMS_TERNARY_SEARCH_H
+
 /**
  * Perform ternary search
  * @param l         lower bound
@@ -29,3 +32,5 @@ double ternary_search(double l, double r, double eps = 1e-9,
     }
     return f(l);                // return the maximum of f(x) in [l, r]
 }
+
+#endif //ALGORITHMS_TERNARY_SEARCH_H

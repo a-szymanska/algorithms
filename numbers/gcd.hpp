@@ -7,6 +7,8 @@
  * Created on 24.11.2022
  */
 
+#ifndef ALGORITHMS_GCD_H
+#define ALGORITHMS_GCD_H
 
 /**
  * Find GCD of the two numbers.
@@ -14,7 +16,6 @@
  * @param y         second number
  * @return          gcd(x, y)
  */
-
 int gcd(int x, int y) {
     int tmp;
     while(y) {
@@ -35,7 +36,6 @@ int gcd(int x, int y) {
  * @param y         second number
  * @return          gcd(x, y)
  */
-
 int gcd_stein(int x, int y) {
     int shift_counter = 0;
     while (y > 0 && x > 0) {
@@ -58,3 +58,5 @@ int gcd_stein(int x, int y) {
     }
     return y << shift_counter;
 }
+
+#endif //ALGORITHMS_GCD_H
