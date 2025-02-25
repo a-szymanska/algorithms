@@ -10,9 +10,9 @@
 #include <stack>
 #include <functional>
 
-#define W 0
-#define G 1
-#define B 2
+#define WHITE 0
+#define GRAY 1
+#define BLACK 2
 
 
 /**
@@ -33,17 +33,17 @@ bool sat(int n, std::vector<int> & values, const std::vector<std::pair<int, int>
     }
     std::stack<int> S;
     int timestamp = 0, comp = 1;
-    std::vector<int> time_in(2*n+2, INT_MAX), low(2*n+2, INT_MAX), color(2*n+2, W), component(2*n+2, -1);
+    std::vector<int> time_in(2*n+2, INT_MAX), low(2*n+2, INT_MAX), color(2*n+2, WHITE), component(2*n+2, -1);
 
     std::function<void(int)> get_colors = [&](int x) {
         time_in[x+n] = low[x+n] = timestamp++;
-        color[x+n] = G;
+        color[x+n] = GRAY;
         S.push(x);
         for (int y : adj[x+n]) {
-            if (color[y+n] == W) {
+            if (color[y+n] == WHITE) {
                 get_colors(y);
                 low[x+n] = std::min(low[x+n], low[y+n]);
-            } else if (color[y+n] == G) {
+            } else if (color[y+n] == GRAY) {
                 low[x+n] = std::min(low[x+n], time_in[y+n]);
             }
         }
@@ -53,17 +53,17 @@ bool sat(int n, std::vector<int> & values, const std::vector<std::pair<int, int>
                 int y = S.top();
                 S.pop();
                 component[y+n] = comp;
-                color[y+n] = B;
+                color[y+n] = BLACK;
             }
             S.pop();
             component[x+n] = comp;
-            color[x+n] = B;
+            color[x+n] = BLACK;
             comp++;
         }
     };
 
     for (int x = -n; x <= n; x++) {
-        if (color[x+n] == W) {
+        if (color[x+n] == WHITE) {
             get_colors(x);
         }
     }
