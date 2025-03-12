@@ -18,7 +18,6 @@ u128 power(u128, u128, u128);
  * @param n      number to be tested for primality
  * @return       true if prime else false
  */
-
 bool miller_rabin(u128 n) {
     u128 s = __builtin_ctz(n-1), d = (n - 1) >> s;
     std::vector<u128> primes = {2, 3, 5, 7, 9, 11, 13, 17, 19, 23};
@@ -53,7 +52,6 @@ bool miller_rabin(u128 n) {
  * @param n      modulo base
  * @return       Result of exponentiation
  */
-
 u128 power(u128 a, u128 d, u128 n) {
     u128 res = 1;
     while (d > 0) {

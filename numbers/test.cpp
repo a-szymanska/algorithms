@@ -5,6 +5,7 @@
 #include "reverse_polish_notation.hpp"
 #include "ternary_search.hpp"
 #include "sat.hpp"
+#include "chinese_remainder_theorem.hpp"
 
 #include <iostream>
 #include <cassert>
@@ -26,10 +27,11 @@ void test_miller_rabin() {
 }
 
 void test_gcd() {
-    assert(gcd(0, 117) == 117);
-    assert(gcd(1024, 8) == 8);
-    assert(gcd(120, 285) == 15);
-    assert(gcd(65537, 42) == 1);
+    int s, t;
+    assert(gcd(0, 117, s, t) == 117);
+    assert(gcd(1024, 8, s, t) == 8);
+    assert(gcd(120, 285, s, t) == 15);
+    assert(gcd(65537, 42, s, t) == 1);
     std::cout << "GCD test: OK" << std::endl;
 }
 
@@ -115,6 +117,26 @@ void test_sat() {
     std::cout << "2-SAT test: OK" << std::endl;
 }
 
+void test_crt() {
+    // 1 * x = 0 mod 3
+    // 2 * x = 0 mod 4
+    // 3 * x = 4 mod 5
+    std::vector<int> A0 = {1, 2, 3};
+    std::vector<int> B0 = {0, 0, 4};
+    std::vector<int> C0 = {3, 4, 5};
+    assert(18 == solve_crt(A0, B0, C0));
+
+    // 2 * x = 1 mod 4
+    // 3 * x = 4 mod 7
+    std::vector<int> A1 = {2, 3};
+    std::vector<int> B1 = {1, 4};
+    std::vector<int> C1 = {4, 7};
+    assert(-1 == solve_crt(A1, B1, C1));
+
+    std::cout << "Chinese Remainder Theorem test: OK" << std::endl;
+}
+
+
 int main() {
     test_miller_rabin();
     test_gcd();
@@ -124,5 +146,6 @@ int main() {
     test_reverse_polish_notation();
     test_ternary_search();
     test_sat();
+    test_crt();
     return 0;
 }

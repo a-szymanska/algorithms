@@ -17,7 +17,6 @@
  * @param p     modular base
  * @return
  */
-
 int64_t power(int64_t a, int k, int64_t p) {
     int64_t res = 1;
     while (k > 0) {

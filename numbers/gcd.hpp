@@ -11,27 +11,26 @@
 #define ALGORITHMS_GCD_H
 
 /**
- * Find GCD of the two numbers.
- * @param x         first number
- * @param y         second number
- * @return          gcd(x, y)
+ * Find GCD using the extended euclidean algorithm.
+ * @param x, y  arguments
+ * @param s, t  coefficients such that GCD(x, y) = xs + yt
+ * @return      GCD(x, y)
  */
-int gcd(int x, int y) {
-    int tmp;
-    while(y) {
-        if (x < y) {
-            tmp = x;
-        } else {
-            tmp = x % y;
-        }
-        x = y;
-        y = tmp;
+int gcd(int x, int y, int &s, int &t) {
+    if (y == 0) {
+        s = 1;
+        t = 0;
+        return x;
     }
-    return x;
+    int s1, t1;
+    int d = gcd(y, x % y, s1, t1);
+    s = t1;
+    t = s1 - (x / y) * t1;
+    return d;
 }
 
 /**
- * Find GCD of the two numbers using Stein's algorithm.
+ * Find GCD using Stein's algorithm.
  * @param x         first number
  * @param y         second number
  * @return          gcd(x, y)
