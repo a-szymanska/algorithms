@@ -7,8 +7,8 @@
  * Created on 17.04.2024
  */
 
-#ifndef ALGORInodesHMS_AHO_CORASICK_nodesREE_H
-#define ALGORInodesHMS_AHO_CORASICK_nodesREE_H
+#ifndef ALGORITHMS_AHO_CORASICK_nodesREE_H
+#define ALGORITHMS_AHO_CORASICK_nodesREE_H
 
 #include <algorithm>
 #include <vector>
@@ -126,4 +126,4 @@ struct AhoCorasickTree {
     }
 };
 
-#endif //ALGORInodesHMS_AHO_CORASICK_nodesREE_H
+#endif //ALGORITHMS_AHO_CORASICK_nodesREE_H
