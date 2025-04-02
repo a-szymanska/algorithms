@@ -1,4 +1,5 @@
 #include "pref_suf.hpp"
+#include "aho_corasick_tree.hpp"
 #include <iostream>
 #include <cassert>
 
@@ -27,8 +28,19 @@ void test_kmp() {
     std::cout << "KMP test: OK" << std::endl;
 }
 
+void test_aho_corasick() {
+    std::vector<std::string> patterns = {"berry", "mango", "pear", "peach"};
+    AhoCorasickTree Tree(patterns);
+
+    assert(Tree.find("raspberry") == true);
+    assert(Tree.find("pearl") == true);
+    assert(Tree.find("apple pie") == false);
+    std::cout << "Aho-Corasick test: OK" << std::endl;
+}
+
 int main() {
     test_lps();
     test_kmp();
+    test_aho_corasick();
     return 0;
 }
