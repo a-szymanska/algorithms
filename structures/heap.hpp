@@ -7,8 +7,8 @@
  * Created on 02.06.2023
  */
 
-#ifndef ALGORITHMS_HEAP_H
-#define ALGORITHMS_HEAP_H
+#ifndef ALGORITHMS_HEAP_HPP
+#define ALGORITHMS_HEAP_HPP
 
 #include <utility>
 #include <functional>
@@ -75,4 +75,4 @@ public:
     }
 };
 
-#endif //ALGORITHMS_HEAP_H
+#endif //ALGORITHMS_HEAP_HPP

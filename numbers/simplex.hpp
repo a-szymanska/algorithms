@@ -8,8 +8,8 @@
  * Created on 02.06.2024
  */
 
-#ifndef ALGORITHMS_SIMPLEX_H
-#define ALGORITHMS_SIMPLEX_H
+#ifndef ALGORITHMS_SIMPLEX_HPP
+#define ALGORITHMS_SIMPLEX_HPP
 
 #include <iostream>
 #include <vector>
@@ -116,4 +116,4 @@ public:
     }
 };
 
-#endif //ALGORITHMS_SIMPLEX_H
+#endif //ALGORITHMS_SIMPLEX_HPP

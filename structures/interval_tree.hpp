@@ -6,8 +6,8 @@
  * Created on 10.01.2023
  */
 
-#ifndef ALGORITHMS_INTERVAL_TREE_H
-#define ALGORITHMS_INTERVAL_TREE_H
+#ifndef ALGORITHMS_INTERVAL_TREE_HPP
+#define ALGORITHMS_INTERVAL_TREE_HPP
 
 #include <vector>
 
@@ -97,4 +97,4 @@ public:
 };
 
 
-#endif //ALGORITHMS_INTERVAL_TREE_H
+#endif //ALGORITHMS_INTERVAL_TREE_HPP

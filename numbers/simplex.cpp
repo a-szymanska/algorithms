@@ -1,4 +1,4 @@
-#include "simplex.h"
+#include "simplex.hpp"
 #include <vector>
 
 int main() {
