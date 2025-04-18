@@ -1,7 +1,7 @@
 #include "miller_rabin.hpp"
 #include "gcd.hpp"
 #include "power.hpp"
-#include "equation_solver.hpp"
+#include "discrete_log.hpp"
 #include "reverse_polish_notation.hpp"
 #include "ternary_search.hpp"
 #include "sat.hpp"

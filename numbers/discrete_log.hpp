@@ -1,6 +1,6 @@
 /**
- * Algorithm to find the smallest x satisfying the equation
- * a^x = b mod p.
+ * Algorithm to find the smallest solution to discrete logarithm
+ * using the Baby-Step-Giant-Step method.
  * Time complexity: O(sqrt(p)*lg(p))
  * Space complexity: O(sqrt(p))
  * Created on 24.04.2024
@@ -14,7 +14,7 @@
 #define ALGORITHMS_EQUATION_SOLVER_H
 
 /**
- * Solve the equation
+ * Solve a^x = b (mod p) for x
  * @param a     first constant
  * @param b     second constant
  * @param p     modular base
