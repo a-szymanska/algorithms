@@ -44,8 +44,8 @@ void test_gcd_stein() {
 }
 
 void test_power() {
-    assert(power(4, 24, 1000000) == 710656);
-    assert(power(47, 2, 65) == 64);
+    assert(pow(4, 24, 1000000) == 710656);
+    assert(pow(47, 2, 65) == 64);
     std::cout << "Power test: OK" << std::endl;
 }
 
