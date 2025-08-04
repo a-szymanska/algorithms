@@ -8,7 +8,7 @@
  */
 
 #include <vector>
-
+#include <climits>
 
 #ifndef ALGORITHMS_BACKPACK_H
 #define ALGORITHMS_BACKPACK_H
