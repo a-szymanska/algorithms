@@ -9,7 +9,6 @@ add_subdirectory(tests)
 
 
 add_executable(test_algebra tests/algebra.cpp)
-target_link_libraries(elliptic_curve gmp gmpxx)
 
 add_executable(test_dynamic tests/dynamic.cpp)
 
