@@ -1,10 +1,10 @@
-#include "bubble_sort.hpp"
-#include "selection_sort.hpp"
-#include "insertion_sort.hpp"
-#include "merge_sort.hpp"
-#include "quick_sort.hpp"
-#include "five_sort.hpp"
-#include "find_kth.hpp"
+#include "../sorting/bubble_sort.hpp"
+#include "../sorting/selection_sort.hpp"
+#include "../sorting/insertion_sort.hpp"
+#include "../sorting/merge_sort.hpp"
+#include "../sorting/quick_sort.hpp"
+#include "../sorting/five_sort.hpp"
+#include "../sorting/find_kth.hpp"
 
 #include <iostream>
 #include <cassert>

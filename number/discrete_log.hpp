@@ -13,8 +13,8 @@
 
 #include "power.hpp"
 
-#ifndef ALGORITHMS_EQUATION_SOLVER_H
-#define ALGORITHMS_EQUATION_SOLVER_H
+#ifndef ALGORITHMS_EQUATION_SOLVER_HPP
+#define ALGORITHMS_EQUATION_SOLVER_HPP
 
 /**
  * Solve a^x = b (mod p) for x
@@ -48,4 +48,4 @@ int64_t solve(int64_t a, int64_t b, int64_t p) {
     return -1;
 }
 
-#endif //ALGORITHMS_EQUATION_SOLVER_H
+#endif //ALGORITHMS_EQUATION_SOLVER_HPP

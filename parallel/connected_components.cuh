@@ -27,7 +27,7 @@ __global__ void pointer_jumper_kernel(int n, int *d_cc, int *d_working);
  * @param n         number of vertices (vertices are indexed from 0)
  * @param m         number of edges
  * @param edges     array of length 2m,
- *                  numbers (2i)-th and (2i+1)-th give ends of edge
+ *                  number (2i)-th and (2i+1)-th give ends of edge
  * @param cc        output array of length n,
  *                  cc[i] is number of component containing vertex i
  */

@@ -3,16 +3,31 @@ project(algorithms)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(algorithms_sorting sorting/test.cpp)
-add_executable(algorithms_numbers numbers/test.cpp)
-add_executable(algorithms_graphs graphs/test.cpp)
-add_executable(algorithms_geometry geometry/test.cpp)
-add_executable(algorithms_dynamic dynamic/test.cpp)
-add_executable(algorithms_text texts/test.cpp)
-add_executable(algorithms_matrix matrix/test.cpp)
-add_executable(algorithms_algebra algebra/test.cpp)
+
+enable_testing()
+add_subdirectory(tests)
+
+
+add_executable(test_algebra tests/algebra.cpp)
+add_executable(elliptic_curve algebra/elliptic_curve.cpp)
+target_link_libraries(elliptic_curve gmp gmpxx)
+
+add_executable(test_dynamic tests/dynamic.cpp)
+
+add_executable(test_geometry tests/geometry.cpp)
+
+add_executable(test_graph tests/graph.cpp)
+
+add_executable(test_matrix tests/matrix.cpp)
+
+add_executable(test_number tests/number.cpp)
+add_executable(simplex number/simplex.cpp number/simplex.hpp)
+
+add_executable(test_sorting tests/sorting.cpp)
+
 add_executable(double_list structures/double_linked_list.cpp structures/double_linked_list.hpp)
 add_executable(interval_tree structures/interval_tree.cpp structures/interval_tree.hpp)
-add_executable(heap structures/heap.cpp structures/heap.hpp)
-add_executable(simplex numbers/simplex.cpp numbers/simplex.hpp)
 add_executable(unordered_map structures/unordered_map.cpp structures/unordered_map.hpp)
+add_executable(heap structures/heap.cpp structures/heap.hpp)
+
+add_executable(test_text tests/texts.cpp)

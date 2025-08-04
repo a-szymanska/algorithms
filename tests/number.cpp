@@ -1,13 +1,14 @@
-#include "miller_rabin.hpp"
-#include "gcd.hpp"
-#include "power.hpp"
-#include "discrete_log.hpp"
-#include "reverse_polish_notation.hpp"
-#include "ternary_search.hpp"
-#include "sat.hpp"
-#include "chinese_remainder_theorem.hpp"
+#include "../number/miller_rabin.hpp"
+#include "../number/gcd.hpp"
+#include "../number/power.hpp"
+#include "../number/discrete_log.hpp"
+#include "../number/reverse_polish_notation.hpp"
+#include "../number/ternary_search.hpp"
+#include "../number/sat.hpp"
+#include "../number/chinese_remainder_theorem.hpp"
 
 #include <iostream>
+#include <cstdint>
 #include <cassert>
 
 void test_miller_rabin() {
@@ -27,7 +28,7 @@ void test_miller_rabin() {
 }
 
 void test_gcd() {
-    int s, t;
+    int64_t s, t;
     assert(gcd(0, 117, s, t) == 117);
     assert(gcd(1024, 8, s, t) == 8);
     assert(gcd(120, 285, s, t) == 15);

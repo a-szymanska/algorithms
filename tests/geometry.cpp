@@ -1,5 +1,5 @@
-#include "max_plus.hpp"
-#include "convex_hull.hpp"
+#include "../geometry/max_plus.hpp"
+#include "../geometry/convex_hull.hpp"
 
 #include <iostream>
 #include <vector>
@@ -12,11 +12,11 @@ void test_max_plus() {
     std::vector<EndPoint> P = { // { id, x, y, l, type }
             {i++, 4, 0, 8, V},  // ((4,0), (4,9))
             {i++, 6, 1, 2, V},  // ((6,1), (6,3))
-            {i, 0, 3, 2, L},  // ((0,3), (2,3))
+            {i, 0, 3, 2, L},    // ((0,3), (2,3))
             {i++, 2, 3, 2, R},
-            {i, 1, 2, 7, L},  // ((1,2), (8,2))
+            {i, 1, 2, 7, L},    // ((1,2), (8,2))
             {i++, 8, 2, 7, R},
-            {i, 1, 1, 8, L},  // ((1,1), (9,1))
+            {i, 1, 1, 8, L},    // ((1,1), (9,1))
             {i++, 9, 1, 8, R}
     };
     assert(max_plus(P) == 2);

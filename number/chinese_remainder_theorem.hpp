@@ -17,7 +17,7 @@
  * Find modular inverse of a (mod m).
  */
 int inv(int a, int m) {
-    int x, y;
+    int64_t x, y;
     int d = gcd(a, m, x, y);
     if (d != 1) {   // a, m are not coprime
         return -1;
@@ -36,7 +36,7 @@ int solve_crt(const std::vector<int>& A, const std::vector<int>& B, const std::v
     int n = static_cast<int>(A.size());
     int x = 0, m = 1;
     for (int i = 0; i < n; i++) {
-        int s, t, d = gcd(A[i], M[i], s, t);
+        int64_t s, t, d = gcd(A[i], M[i], s, t);
         if (B[i] % d != 0) {
             return -1;
         }

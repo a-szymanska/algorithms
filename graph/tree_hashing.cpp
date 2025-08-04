@@ -11,8 +11,8 @@ const size_t p = 1635795965187779;
 const size_t m = 507077;
 
 /**
- * Encode the array of numbers
- * @param part_hash     array of numbers
+ * Encode the array of number
+ * @param part_hash     array of number
  * @return              encoding
  */
 std::size_t get_array_hash(std::vector<size_t> & part_hash) {

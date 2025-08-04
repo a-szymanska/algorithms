@@ -1,7 +1,7 @@
 /**
  * Implementation of the Bellman-Ford algorithm to find the shortest paths
  * from a single source to all other vertices in a weighted graph.
- * The algorithm can handle graphs with negative weights and it detects
+ * The algorithm can handle graph with negative weights and it detects
  * negative weight cycles.
  * Time complexity: O(V*E)
  * Space complexity: O(V)

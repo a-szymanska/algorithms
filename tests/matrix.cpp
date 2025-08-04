@@ -1,6 +1,6 @@
-#include "system_solver.hpp"
-#include "gram_schmidt.hpp"
-#include "eigenvalues.hpp"
+#include "../matrix/system_solver.hpp"
+#include "../matrix/gram_schmidt.hpp"
+#include "../matrix/eigenvalues.hpp"
 
 #include <iostream>
 #include <cassert>

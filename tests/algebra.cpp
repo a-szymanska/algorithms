@@ -1,6 +1,6 @@
-#include "finite_field.hpp"
-#include "polynomial_primality.hpp"
-#include "tonelli_shanks.hpp"
+#include "../algebra/finite_field.hpp"
+#include "../algebra/polynomial_primality.hpp"
+#include "../algebra/tonelli_shanks.hpp"
 
 #include <iostream>
 #include <cassert>
@@ -48,9 +48,26 @@ void test_tonelli_shanks() {
     std::cout << "Tonelli-Shanks test: OK" << std::endl;
 }
 
+//void test_elliptic_curve() {
+//    ll A = 2, B = 3, p = 17;
+//    EllipticCurve curve(A, B, p);
+//
+//    Point P(5, 1);
+//    Point Q(6, 3);
+//
+//    Point R = curve.add(P, Q);
+//    if (!R.is_inf)
+//        std::cout << "R = (" << R.x << ", " << R.y << ")\n";
+//    else
+//        std::cout << "R is the point at infinity\n";
+//
+//    std::cout << "Tonelli-Shanks test: OK" << std::endl;
+//}
+
 int main() {
     test_galois_field();
     test_polynomial_primality();
     test_tonelli_shanks();
+//    test_elliptic_curve();
     return 0;
 }

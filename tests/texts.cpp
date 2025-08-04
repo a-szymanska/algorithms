@@ -1,5 +1,5 @@
-#include "pref_suf.hpp"
-#include "aho_corasick_tree.hpp"
+#include "../texts/pref_suf.hpp"
+#include "../texts/aho_corasick_tree.hpp"
 #include <iostream>
 #include <cassert>
 

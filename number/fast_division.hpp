@@ -2,7 +2,7 @@
  * Floor division on large number using FFT and Newton's method
  * to approximate the inverse of divisor. The code uses function
  * std::vector<int> fastmul(std::vector<int> &a, std::vector<int> &b)
- * that multiplies two numbers represented as vectors
+ * that multiplies two number represented as vectors
  * and starting from the least significant figures in O(nlgn).
  *
  * Time complexity: O(n * lg^2 n) (more or less)

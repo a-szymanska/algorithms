@@ -1,13 +1,13 @@
-#include "dwyer.cpp"
-#include "edmonds_karp.cpp"
-#include "floyd_warshall.cpp"
-#include "bipartite.cpp"
-#include "turbo_matching.cpp"
-#include "bellman_ford.cpp"
-#include "dijkstra.cpp"
-#include "tree_hashing.cpp"
-#include "connected_components.cpp"
-#include "topological_sort.cpp"
+#include "../graph/dwyer.cpp"
+#include "../graph/edmonds_karp.cpp"
+#include "../graph/floyd_warshall.cpp"
+#include "../graph/bipartite.cpp"
+#include "../graph/turbo_matching.cpp"
+#include "../graph/bellman_ford.cpp"
+#include "../graph/dijkstra.cpp"
+#include "../graph/tree_hashing.cpp"
+#include "../graph/connected_components.cpp"
+#include "../graph/topological_sort.cpp"
 
 #include <iostream>
 #include <vector>

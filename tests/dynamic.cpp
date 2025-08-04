@@ -1,4 +1,4 @@
-#include "backpack_problem.hpp"
+#include "../dynamic/backpack_problem.hpp"
 
 #include <iostream>
 #include <vector>
