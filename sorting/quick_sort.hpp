@@ -6,6 +6,7 @@
  */
 
 #include <vector>
+#include <cstdlib>
 
 #ifndef ALGORITHMS_QUICK_SORT_H
 #define ALGORITHMS_QUICK_SORT_H
