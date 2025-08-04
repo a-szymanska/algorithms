@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <stack>
+#include <climits>
 #include <functional>
 
 #ifndef ALGORITHMS_SAT_H
