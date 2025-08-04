@@ -28,7 +28,7 @@ add_test(NAME NumberTests COMMAND test_number)
 add_executable(test_sorting tests/sorting.cpp)
 add_test(NAME SortingTests COMMAND test_sorting)
 
-add_executable(test_text tests/texts.cpp)
+add_executable(test_text tests/text.cpp)
 add_test(NAME TextTests COMMAND test_text)
 
 # ---------------------------
