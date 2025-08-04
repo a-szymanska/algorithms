@@ -27,7 +27,7 @@ struct Node {
 struct AhoCorasickTree {
     std::vector<Node> nodes;
 
-    explicit AhoCorasickTree(std::vector<std::string> & patterns) {
+    AhoCorasickTree(std::vector<std::string> & patterns) {
         nodes.emplace_back();
         for (auto p : patterns) {
             add_pattern(p);
@@ -49,7 +49,7 @@ struct AhoCorasickTree {
         nodes[i].final = true;
     }
 
-    void add_msm_edges() {
+    void add_msm_edges() {  // mismatch links
         auto& root = nodes[0];
         root.msm = 0;
         std::queue<int> q;
