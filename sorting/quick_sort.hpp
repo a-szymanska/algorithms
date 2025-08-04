@@ -37,7 +37,7 @@ void quick_sort(std::vector<int> & data, int lower = -1, int upper = -1) {
 }
 
 void doPartition(std::vector<int> & data, int lower, int upper, int& l, int& r) {
-    int pivot_idx = lower + std::rand() % (upper - lower);
+    int pivot_idx = lower + rand() % (upper - lower);
     int pivot = data[pivot_idx];
     std::swap(data[pivot_idx], data[lower]);
     l = lower, r = upper;
