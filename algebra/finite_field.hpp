@@ -1,7 +1,6 @@
 /**
  * The implementation of some finite fields
  * needed for algebra algorithms.
- * Created on 01.04.2024
  */
 
 #include <iostream>

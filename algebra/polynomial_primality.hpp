@@ -3,7 +3,6 @@
  * A polynomial is considered to be prime if it is irreducible in a given field.
  * Time complexity: O(poly(n))
  * Space complexity: O(n)
- * Created on 17.04.2025
  */
 
 #include "finite_field.hpp"

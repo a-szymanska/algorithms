@@ -3,7 +3,6 @@
  * for computing discrete square root in modular arithmetic.
  * Time complexity: O(log n) randomized
  * Space complexity: O(1)
- * Created on 17.04.2025
  */
 
 #include "../number/power.hpp"
