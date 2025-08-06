@@ -1,10 +1,13 @@
 /**
  * Algorithm to find kth element in non-decreasing order
  * in an array using the median-of-medians method.
- * Created by Anna Szymańska on 30.05.2023
+ * Time complexity: O(n)
  */
 
 #include <vector>
+
+#include "insertion_sort.hpp"
+#include "five_sort.hpp"
 
 #ifndef ALGORITHMS_MEDIAN_H
 #define ALGORITHMS_MEDIAN_H

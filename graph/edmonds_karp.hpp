@@ -2,14 +2,17 @@
  * Implementation of Edmonds-Karp's algorithm for finding maximum
  * flow in a network. The algorithm uses the Ford-Fulkerson method
  * but chooses the shortest augmenting paths thanks to BFS.
- * Time complexity: O(|V|*|E|^2)
- * Space complexity: O(|V|+|E|)
- * Created on 01.03.2024
+ * Time complexity: O(n * m^2)
+ * Space complexity: O(n + m)
+ * n = |V|, m = |E|
  */
 
 #include <vector>
 #include <climits>
 #include <queue>
+
+#ifndef ALGORITHMS_EDMONDS_H
+#define ALGORITHMS_EDMONDS_H
 
 struct Edge {
     int v, c, f, rev_idx;
@@ -92,3 +95,5 @@ int edmondskarp(int n, int s, int t, std::vector<std::vector<Edge>> &adj) {
     }
     return max_flow;
 }
+
+#endif // ALGORITHMS_EDMONDS_H

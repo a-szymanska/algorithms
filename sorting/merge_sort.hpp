@@ -1,8 +1,8 @@
 /**
- * An implementation of the merge sort algorithm in C++.
+ * Implementation of the merge sort algorithm.
  * The merge_sort function additionally counts the number
  * of inversions in the sequence of number.
- * Created on 16.05.2023
+ * Time complexity: O(n*logn)
  */
 
 #include <vector>

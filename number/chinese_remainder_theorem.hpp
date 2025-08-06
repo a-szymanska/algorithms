@@ -3,7 +3,6 @@
  * Chinese Remainder Theorem
  * Time complexity: O(n * logM), where M maximum modulus value
  * Space complexity: O(1)
- * Created on 12.03.2025
  */
 
 #include <vector>

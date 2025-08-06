@@ -3,7 +3,6 @@
  * and a function to calculate the area of a convex polygon.
  * Time complexity: O(n*lg(n))
  * Space complexity: O(n)
- * Created on 08.05.2024
  */
 
 #include <vector>

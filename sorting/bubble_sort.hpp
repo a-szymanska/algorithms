@@ -1,6 +1,6 @@
 /**
- * A simple implementation of the bubble sort algorithm in C++.
- * Created by Anna Szymańska on 4.11.2022
+ * Implementation of the bubble sort algorithm.
+ * Time complexity: O(n^2)
  */
 
 #include <vector>

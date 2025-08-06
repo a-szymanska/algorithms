@@ -5,12 +5,14 @@
  * procedure repeated each 10000 iterations in discharge procedure.
  * Time complexity: O(|V|^2 * |E|)
  * Space complexity: O(|V| + |E|)
- * Created on 22.03.2024
  */
 
 #include <vector>
 #include <climits>
 #include <queue>
+
+#ifndef ALGORITHMS_PUSH_RELABEL_H
+#define ALGORITHMS_PUSH_RELABEL_H
 
 struct Edge {
     int v;
@@ -164,3 +166,5 @@ void discharge(int u, std::vector<int> & excess, std::vector<int> & height, std:
         i = 0;
     }
 }
+
+#endif // ALGORITHMS_PUSH_RELABEL_H

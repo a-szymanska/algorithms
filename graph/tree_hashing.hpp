@@ -1,11 +1,14 @@
 /**
  * Simple function to encode a tree to compare with other
  * trees for isomorphism.
- * Created on 22.06.2024
+ * Time complexity: O(n)
  */
 
 #include <iostream>
 #include <vector>
+
+#ifndef ALGORITHMS_TREE_HASH_H
+#define ALGORITHMS_TREE_HASH_H
 
 const size_t p = 1635795965187779;
 const size_t m = 507077;
@@ -54,3 +57,5 @@ std::size_t hash_tree(const std::vector<char> & tree) {
     int idx = 0;
     return get_tree_hash(tree, idx);
 }
+
+#endif // ALGORITHMS_TREE_HASH_H

@@ -3,7 +3,6 @@
  * in 2-CNF form or decide that it is unsatisfiable.
  * Time complexity: O(n)
  * Space complexity: O(n)
- * Created on 10.03.2023
  */
 
 #include <vector>

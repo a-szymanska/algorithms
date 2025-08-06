@@ -3,26 +3,28 @@
  * from a single source to all other vertices in a weighted graph.
  * The algorithm can handle graph with negative weights and it detects
  * negative weight cycles.
- * Time complexity: O(V*E)
- * Space complexity: O(V)
- * Created on 11.10.2023
+ * Time complexity: O(n*m)
+ * Space complexity: O(n)
+ * n = |V|, m = |E|
  */
 
 #include <vector>
 #include <climits>
 #include <iostream>
 
+#ifndef ALGORITHMS_BELLMAN_H
+#define ALGORITHMS_BELLMAN_H
 
 /**
  * Compute the shortest distances from src to other vertices
- * @param adj       adjacency list
  * @param src       source vertex
- * @return          array of distances
- *                  If a negative weight cycle is detected, an empty vector is returned.
+ * @param adj       adjacency list
+ * @param dist      array of distances
+ * @return          True if a negative weight cycle is detected, otherwise false.
  */
-std::vector<int> bellman_ford(const std::vector<std::vector<std::pair<int, int>>> &adj, int src) {
+bool bellman_ford(int src, const std::vector<std::vector<std::pair<int, int>>> &adj, std::vector<int> & dist) {
     int n = static_cast<int>(adj.size());
-    std::vector<int> dist(n, INT_MAX);
+    dist.resize(n, INT_MAX);
     dist[src] = 0;
 
     for (int i = 0; i < n - 1; i++) {
@@ -40,9 +42,12 @@ std::vector<int> bellman_ford(const std::vector<std::vector<std::pair<int, int>>
         for (auto p : adj[u]) {
             int v = p.first, weight = p.second;
             if (dist[u] != INT_MAX && dist[u] + weight < dist[v]) {
-                return {};
+                dist.clear();
+                return true;
             }
         }
     }
-    return dist;
+    return false;
 }
+
+#endif // ALGORITHMS_BELLMAN_H

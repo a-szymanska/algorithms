@@ -3,11 +3,13 @@
  * the shortest paths between all pairs of vertices in a weighted graph.
  * Time complexity: O(|V|^3)
  * Space complexity: O(|V|^2)
- * Created on 21.11.2023
  */
 
 #include <vector>
 #include <climits>
+
+#ifndef ALGORITHMS_FLOYD_H
+#define ALGORITHMS_FLOYD_H
 
 /**
  * Find the shortest pairwise distances
@@ -28,3 +30,5 @@ void floyd_warshall(std::vector<std::vector<int>> & dist) {
         }
     }
 }
+
+#endif // ALGORITHMS_FLOYD_H

@@ -2,13 +2,15 @@
  * Algorithm to reconstruct a binary tree given two traversals:
  * inorder and preorder or post-order. From preorder and postorder
  * one can only get back the tree if it's a full binary tree.
- * Time complexity: O(nlgn) reduced by searching for node from tho ends of array
- * Space complexity: O(n)
- * Created on 12.03.2023
+ * Time complexity: O(|V|*lg|V|) reduced by searching for node from tho ends of array
+ * Space complexity: O(|V|)
  */
 
 #include <iostream>
 #include <vector>
+
+#ifndef ALGORITHMS_TRAVERSE_H
+#define ALGORITHMS_TRAVERSE_H
 
 struct Node {
     int id;
@@ -71,3 +73,5 @@ int get_pre_in(std::vector<Node> & V, const std::vector<int>::iterator & pre, co
     V.push_back({root, left, right});
     return V.size() - 1;
 }
+
+#endif // ALGORITHMS_TRAVERSE_H

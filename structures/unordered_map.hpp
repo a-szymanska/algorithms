@@ -2,7 +2,6 @@
  * An implementation of unordered map template
  * using the cuckoo hashing which gives the amortised cost
  * of insertion and deletion operations O(1).
- * Created on 24.11.2023
  */
 
 #include <vector>

@@ -2,7 +2,6 @@
  * Implementation of modular exponentiation by squaring
  * Time complexity: O(k)
  * Space complexity: O(1)
- * Created on 24.04.2024
  */
 
 #include <iostream>

@@ -3,7 +3,6 @@
  * classes with any associative operation + for combining Values
  * and * for combining Modifiers and defined () operator for applying
  * the effect of Modifier on Value.
- * Created on 10.01.2023
  */
 
 #ifndef ALGORITHMS_INTERVAL_TREE_HPP

@@ -2,7 +2,6 @@
  * Implementation of double linked list template with reverse
  * and merge operations. All operations (except clear) are performed
  * in constant time.
- * Created on 10.01.2023
  */
 
 #ifndef ALGORITHMS_DOUBLE_LINKED_LIST_HPP

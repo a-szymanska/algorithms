@@ -1,6 +1,6 @@
 /**
- * A simple implementation of the insertion sort algorithm in C++.
- * Created on 4.11.2022
+ * Implementation of the insertion sort algorithm.
+ * Time complexity: O(n^2)
  */
 
 #include <vector>

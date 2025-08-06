@@ -1,8 +1,8 @@
 /**
- * An implementation of the quick sort algorithm in C++.
+ * Implementation of the quick sort algorithm.
  * The algorithm uses randomization of pivot choice
  * and Lomuto's three-way partition.
- * Created on 27.05.2023
+ * Time complexity: O(n*logn)
  */
 
 #include <vector>

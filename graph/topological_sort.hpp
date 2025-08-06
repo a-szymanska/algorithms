@@ -1,11 +1,14 @@
 /**
  * Topological sort algorithm using BFS.
- * Time complexity: O(n + m)
- * Space complexity: O(n)
- * Created on 30.04.2023
+ * Time complexity: O(|V| + |E|)
+ * Space complexity: O(|V|)
  */
+
 #include <vector>
 #include <queue>
+
+#ifndef ALGORITHMS_TOPOSORT_H
+#define ALGORITHMS_TOPOSORT_H
 
 /**
  * Sort vertices in topological order
@@ -49,3 +52,5 @@ bool toposort(std::vector<std::vector<int>> & sorted, const std::vector<std::vec
     sorted.push_back(sorted_tmp);
     return visit_counter == n;
 }
+
+#endif // ALGORITHMS_TOPOSORT_H

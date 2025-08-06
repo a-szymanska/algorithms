@@ -4,7 +4,6 @@
  * based on divide and conquer strategy.
  * Time complexity: O(n*w)
  * Space complexity: O(w)
- * Created on 10.10.2023
  */
 
 #include <vector>

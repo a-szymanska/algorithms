@@ -1,10 +1,19 @@
+/**
+ * The Dijkstra's algorithm to compute distances from the source to all vertices
+ * in weighted graph without negative edges.
+ * Time complexity: O(n*log n + n)
+ * n = |V|, m = |E|
+ */
+
 #include <climits>
 #include <unordered_map>
 #include <vector>
 #include <queue>
 
+#ifndef ALGORITHMS_DIJKSTRA_H
+#define ALGORITHMS_DIJKSTRA_H
 
-void dijkstra(int src, std::vector<std::vector<std::pair<int, int>>> & adj, std::vector<int> & dist) {
+void dijkstra(int src, const std::vector<std::vector<std::pair<int, int>>> & adj, std::vector<int> & dist) {
     int n = static_cast<int>(adj.size());
     std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<>> Q;
 
@@ -26,3 +35,5 @@ void dijkstra(int src, std::vector<std::vector<std::pair<int, int>>> & adj, std:
         }
     }
 }
+
+#endif // ALGORITHMS_DIJKSTRA_H

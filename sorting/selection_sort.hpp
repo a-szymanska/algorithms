@@ -1,6 +1,6 @@
 /**
- * A simple implementation of the selection sort algorithm in C++.
- * Created on 4.11.2022
+ * Implementation of the selection sort algorithm.
+ * Time complexity: O(n^2)
  */
 
 #include <vector>

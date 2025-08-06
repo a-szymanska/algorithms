@@ -5,7 +5,6 @@
  * detects the cases with unbounded solution using the Bland's rule.
  * Time complexity: = O((m choose n) * n*m)
  * Space complexity: O(n*m), for n variables and m equations
- * Created on 02.06.2024
  */
 
 #ifndef ALGORITHMS_SIMPLEX_HPP

@@ -2,13 +2,15 @@
  * Implementation of the Turbo Matching algorithm to find
  * the maximum matching in a bipartite graph by iteratively
  * augmenting paths using DFS.
- * Time complexity: O(V*E)
- * Space complexity: O(V+E)
- * Created on 14.01.2024
+ * Time complexity: O(|V|*|E|)
+ * Space complexity: O(|V|+|E|)
  */
 
 #include <vector>
 #include <functional>
+
+#ifndef ALGORITHMS_TURBO_H
+#define ALGORITHMS_TURBO_H
 
 /**
  * Find the maximum match in bipartite graph
@@ -47,3 +49,5 @@ int find_match(std::vector<std::vector<int>>& adj) {
     }
     return n_matched / 2;
 }
+
+#endif // ALGORITHMS_TURBO_H

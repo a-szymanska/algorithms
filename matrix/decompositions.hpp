@@ -2,7 +2,6 @@
  * Implementations of LU and QR matrix decompositions.
  * Time complexity: O(n^3)
  * Space complexity: O(n^2)
- * Created on 25.02.2025
  */
 
 #include <vector>

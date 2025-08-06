@@ -3,7 +3,6 @@
  * using the Baby-Step-Giant-Step method.
  * Time complexity: O(sqrt(p)*lg(p))
  * Space complexity: O(sqrt(p))
- * Created on 24.04.2024
  */
 
 #include <iostream>

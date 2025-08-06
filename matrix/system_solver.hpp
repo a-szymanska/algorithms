@@ -4,7 +4,6 @@
  * the LU decomposition with partial pivoting.
  * Time complexity: O(n^2 * m)
  * Space complexity: O(n^2)
- * Created on 24.02.2025
  */
 
 #include <vector>

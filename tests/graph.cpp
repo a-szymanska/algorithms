@@ -1,13 +1,14 @@
-#include "../graph/dwyer.cpp"
-#include "../graph/edmonds_karp.cpp"
-#include "../graph/floyd_warshall.cpp"
-#include "../graph/bipartite.cpp"
-#include "../graph/turbo_matching.cpp"
-#include "../graph/bellman_ford.cpp"
-#include "../graph/dijkstra.cpp"
-#include "../graph/tree_hashing.cpp"
-#include "../graph/connected_components.cpp"
-#include "../graph/topological_sort.cpp"
+#include "../graph/dwyer.hpp"
+#include "../graph/edmonds_karp.hpp"
+#include "../graph/floyd_warshall.hpp"
+#include "../graph/bipartite.hpp"
+#include "../graph/turbo_matching.hpp"
+#include "../graph/bellman_ford.hpp"
+#include "../graph/dijkstra.hpp"
+#include "../graph/johnson.hpp"
+#include "../graph/tree_hashing.hpp"
+#include "../graph/connected_components.hpp"
+#include "../graph/topological_sort.hpp"
 
 #include <iostream>
 #include <vector>
@@ -112,8 +113,9 @@ void test_bellman_ford() {
             {{2,5}, {1,1}},
             {{3,-3}}
     };
-    std::vector<int> dist0 = {0, -1, 2, -2, 1};
-    assert(dist0 == bellman_ford(adj0, 0));
+    std::vector<int> dist0, dist0_ok = {0, -1, 2, -2, 1};
+    bellman_ford(0, adj0, dist0);
+    assert(dist0_ok == dist0);
 
     // Negative weight cycle
     std::vector<std::vector<std::pair<int, int>>> adj1 = {
@@ -122,41 +124,40 @@ void test_bellman_ford() {
             {},
             {{0,-2}}
     };
-    assert(bellman_ford(adj1, 0).empty());
-
+    std::vector<int> dist1;
+    assert(bellman_ford(0, adj1, dist1));
     std::cout << "Bellman-Ford test: OK" << std::endl;
 }
 
 void test_dijkstra() {
-        // Test Case 1: Simple graph
-        std::vector<std::vector<std::pair<int, int>>> adj0 = {
-                {{1,1}, {2,10}},
-                {{2,2}, {0,4}},
-                {{3,3}},
-                {}
+        std::vector<std::vector<std::pair<int, int>>> adj = {
+                {{1,1}, {4,10}},
+                {{0,4}, {2,2}},
+                {},
+                {{0,3}}
         };
-        std::vector<std::vector<int>> pairwise_dist0 = {
-                {0, 1, 3, 6},
-                {4, 0, 2, 5},
-                {INT_MAX, INT_MAX, 0, 3},
-                {INT_MAX, INT_MAX, INT_MAX, 0}
-        };
-        assert(pairwise_dist0 == dijkstra(adj0));
-
-        // Test Case 2: Graph with negative weights
-        std::vector<std::vector<std::pair<int, int>>> adj1 = {
-                {{1,1}},
-                {{2,-1}, {0,4}},
-                {{0,-1}}
-        };
-        std::vector<std::vector<int>> pairwise_dist1 = {
-                {0, 1, 0},
-                {-2, 0, -1},
-                {-1, 0, 0}
-        };
-        assert(pairwise_dist1 == dijkstra(adj1));
+        std::vector<int> dist, dist_ok = {0, 1, 3, INT_MAX};
+        dijkstra(0, adj, dist);
+        assert(dist_ok == dist);
 
     std::cout << "Dijkstra test: OK" << std::endl;
+}
+
+void test_johnson() {
+    std::vector<std::vector<std::pair<int, int>>> adj = {
+            {{1,3}},
+            {{2,-1}, {0,4}},
+            {{0,-1}}
+    };
+    std::vector<std::vector<int>> dist, dist_ok = {
+            {0, 3, 2},
+            {-2, 0, -1},
+            {-1, 2, 0}
+    };
+    johnson(adj, dist);
+    assert(dist_ok == dist);
+
+    std::cout << "Johnson test: OK" << std::endl;
 }
 
 void test_tree_hashing() {
@@ -194,7 +195,7 @@ void test_scc() {
 }
 
 void test_topological_sort() {
-     vector<vector<int>> adj0 = {
+     std::vector<std::vector<int>> adj0 = {
          {2, 4, 5},
          {4, 5},
          {3, 4},
@@ -202,8 +203,8 @@ void test_topological_sort() {
          {5},
          {}
      };
-    vector<vector<int>> sorted0;
-    vector<vector<int>> sorted_correct0 = {
+    std::vector<std::vector<int>> sorted0;
+    std::vector<std::vector<int>> sorted_correct0 = {
             {0, 1},
             {2},
             {3, 4},
@@ -211,12 +212,12 @@ void test_topological_sort() {
     };
     assert(toposort(sorted0, adj0) == true);
     assert(sorted_correct0 == sorted0);
-    vector<vector<int>> adj1 = {
+    std::vector<std::vector<int>> adj1 = {
             {1},
             {2},
             {0}
     };
-    vector<vector<int>> sorted1;
+    std::vector<std::vector<int>> sorted1;
     assert(toposort(sorted1, adj1) == false);
     std::cout << "Topological sort test: OK" << std::endl;
 }
@@ -228,7 +229,8 @@ int main() {
     test_bipartite();
     test_turbo_matching();
     test_bellman_ford();
-//    test_dijkstra();
+    test_dijkstra();
+    test_johnson();
     test_tree_hashing();
     test_scc();
     test_topological_sort();

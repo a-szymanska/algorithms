@@ -4,7 +4,6 @@
  * or a max-heap or any other depending on the comparator provided. The class
  * supports basic heap operations such as insertion, extraction of the top
  * element, and peeking at the top element.
- * Created on 02.06.2023
  */
 
 #ifndef ALGORITHMS_HEAP_HPP

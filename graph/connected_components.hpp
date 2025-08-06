@@ -3,11 +3,14 @@
  * for strongly connected components in a graph.
  * Time complexity: O(n + m)
  * Space complexity: O(n + m)
- * Created on 12.04.2023
+ * n = |V|, m = |E|
  */
 
 #include <vector>
 #include <functional>
+
+#ifndef ALGORITHMS_CONNECTED_H
+#define ALGORITHMS_CONNECTED_H
 
 /**
  * Determin strongly connected components for a given graph
@@ -58,3 +61,5 @@ std::vector<int> get_scc(int n, const std::vector<std::vector<int>> & adj) {
     }
     return component;
 }
+
+#endif // ALGORITHMS_CONNECTED_H

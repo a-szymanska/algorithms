@@ -4,7 +4,6 @@
  * the input matrix. The modified version ensures better numerical stability.
  * Time complexity: O(N * D^2), for N vectors from R^D
  * Space complexity: O(D^2)
- * Created on 25.02.2025
  */
 
 #include <numeric>

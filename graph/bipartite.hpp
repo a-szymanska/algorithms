@@ -2,14 +2,17 @@
  * Algorithm to check if graph is bipartite using BFS.
  * The algorithm traverses the graph and colors it using two colors.
  * If it finds a conflict in coloring, the graph is not bipartite.
- * Time complexity: O(|V|+|E|)
- * Space complexity: O(|V|)
- *
- * Created on 12.02.2023
+ * Time complexity: O(n + m)
+ * Space complexity: O(n)
+ * n = |V|, m = |E|
  */
 
 #include <vector>
 #include <queue>
+
+
+#ifndef ALGORITHMS_BIPARTITE_H
+#define ALGORITHMS_BIPARTITE_H
 
 /**
  * Check if a graph is bipartite
@@ -41,3 +44,6 @@ bool is_bipartite(std::vector<std::vector<int>> & adj) {
     }
     return true;
 }
+
+
+#endif // ALGORITHMS_BIPARTITE_H

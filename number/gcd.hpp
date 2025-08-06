@@ -4,7 +4,8 @@
  * the standard one (euclidean) and the one based on Stein's algorithm
  * that is without division or modulo operations which are typically significantly
  * slower than the logic operations.
- * Created on 24.11.2022
+ * Time complexity: O(log x * M(x)), where M(x) is complexity of multiplication of x, y
+ * Space complexity: O(1)
  */
 
 #ifndef ALGORITHMS_GCD_H

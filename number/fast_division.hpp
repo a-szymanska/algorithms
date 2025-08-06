@@ -7,7 +7,6 @@
  *
  * Time complexity: O(n * lg^2 n) (more or less)
  * Space complexity: O(n), where n = |A| + |B|
- * Created on 25.02.2025
  */
 
 #include <iostream>

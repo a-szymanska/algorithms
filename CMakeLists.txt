@@ -34,6 +34,7 @@ add_test(NAME TextTests COMMAND test_text)
 # ---------------------------
 # Other
 # ---------------------------
+add_executable(elliptic_curve algebra/elliptic_curve.cpp)
 add_executable(simplex number/simplex.cpp)
 add_executable(double_list structures/double_linked_list.cpp)
 add_executable(interval_tree structures/interval_tree.cpp)

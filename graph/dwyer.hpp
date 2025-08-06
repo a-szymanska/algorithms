@@ -4,10 +4,12 @@
  * The algorithm modifies the tree but finally restores the original.
  * Time complexity: O(|V|)
  * Space complexity: O(1)
- * Created on 23.03.2023
  */
 
 #include <vector>
+
+#ifndef ALGORITHMS_DWYER_H
+#define ALGORITHMS_DWYER_H
 
 typedef struct node {
     int left = 0;
@@ -48,3 +50,4 @@ std::vector<int> dwyer(std::vector<node> & T, int root) {
     }
     return traverse;
 }
+#endif // ALGORITHMS_DWYER_H
